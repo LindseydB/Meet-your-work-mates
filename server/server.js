@@ -20,7 +20,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
-matesRoutes.route('/').get(function(req, res) {
+matesRoutes.get('/', function(req, res) {
     Mates.find(function(err, mates) {
         if (err) {
             console.log(err);
@@ -30,14 +30,14 @@ matesRoutes.route('/').get(function(req, res) {
     });
 });
 
-matesRoutes.route('/:id').get(function(req, res) {
+matesRoutes.get('/:id', function(req, res) {
     let id = req.params.id;
     Mates.findById(id, function(err, mate) {
         res.json(mate);
     });
 });
 
-matesRoutes.route('/update/:id').post(function(req, res) {
+matesRoutes.post('/update/:id',function(req, res) {
     Mates.findById(req.params.id, function(err, mate) {
         if (!mate)
             res.status(404).send("data is not found");
@@ -57,7 +57,7 @@ matesRoutes.route('/update/:id').post(function(req, res) {
     });
 });
 
-matesRoutes.route('/add').post(function(req, res) {
+matesRoutes.post('/add', function(req, res) {
     let mate = new Mates(req.body);
     mate.save()
         .then(mate => {
