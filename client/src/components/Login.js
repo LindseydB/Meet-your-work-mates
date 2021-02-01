@@ -24,19 +24,19 @@ class Login extends React.Component {
                 isChecked: event.target.checked
             });
         }
-
+    
 
     onSubmitForm = (e) => {
         e.preventDefault();
         var username = e.target.elements.inputEmail.value;
         var password = e.target.elements.inputPassword.value;
-
+        
 
         let hardcodedCred = {
             email: 'test.user@ibm.co.nz',
             password: 'password123'
         }
-
+    
         if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
             //correct combination for login
             const token = '211333714swen';
@@ -54,7 +54,7 @@ class Login extends React.Component {
 
         return (
             <div>
-
+              
                 <div>
                     <form method="post" onSubmit={this.onSubmitForm}>
 

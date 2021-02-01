@@ -7,6 +7,7 @@ import EventList from "./components/home/event-list.component.js"
 import Home from "./components/home/home.component.js"
 import LoginRegister from "./components/LoginRegister.js";
 
+
 function App() {
   var currentLocation = window.location.pathname;
   if(currentLocation == "/"){
