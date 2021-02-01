@@ -9,7 +9,6 @@ export default class Register extends Component {
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePhonenumber = this.onChangePhonenumber.bind(this);
-        this.onChangeJob = this.onChangeJob.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
@@ -17,8 +16,7 @@ export default class Register extends Component {
             last_name:'',
             password:'',
             email:'',
-            phone_number: '',
-            job: ''
+            phone_number: ''
         }
     }
 
@@ -52,23 +50,16 @@ export default class Register extends Component {
         });
     }
 
-    onChangeJob(e) {
-        this.setState({
-            job: e.target.value
-        });
-    }
-
     onSubmit(e) {
         e.preventDefault();
 
         const newMate = {
             name: this.first_name + " " + this.last_name,
             email: this.email,
-            mobile: this.mobile,
-            job: this.job
+            mobile: this.mobile
         }
 
-        axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/', newMate)
+        axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -76,8 +67,7 @@ export default class Register extends Component {
             last_name:'',
             password:'',
             email:'',
-            phone_number: '',
-            job: ''
+            phone_number: ''
         })
     }
 
@@ -124,14 +114,6 @@ export default class Register extends Component {
                         className="form-control"
                         value={this.state.phone_number}
                         onChange={this.onChangePhonenumber}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Job: </label>
-                        <input type="text"
-                            className="form-control"
-                            value={this.state.job}
-                            onChange={this.onChangeJob}
                         />
                     </div>
                     <div className="form-group">
