@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import TodosList from "../todos-list.component.js"
+import EventList from "./event-list.component.js"
 import "./home.css";
 
 
@@ -60,7 +60,7 @@ export default class CreateTodo extends Component{
             <h1 class="h2">Upcoming Events</h1>
 
             <div class="sidescroll">
-              <TodosList />
+              <EventList />
             </div>
           </div>
         </div>

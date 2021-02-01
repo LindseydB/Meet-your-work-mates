@@ -12,11 +12,11 @@ export default class Register extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            first_name = '',
-            last_name = '',
-            password = '',
-            email = '',
-            phone_number = ''
+            first_name:'',
+            last_name:'',
+            password:'',
+            email:'',
+            phone_number:''
         }
     }
 
@@ -54,11 +54,11 @@ export default class Register extends Component {
         e.preventDefault();
 
         this.setState({
-            first_name = '',
-            last_name = '',
-            password = '',
-            email = '',
-            phone_number = ''
+            first_name:'',
+            last_name:'',
+            password:'',
+            email:'',
+            phone_number:''
         })
     }
 
