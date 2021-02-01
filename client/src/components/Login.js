@@ -41,10 +41,12 @@ class Login extends React.Component {
             //correct combination for login
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
-            this.props.history.push("/create")
+            this.props.history.push("/")
+
         } else if ((username == hardcodedCred.email) && (password !== hardcodedCred.password)) {
             //bad combination
             alert('incorrect password');
+
         }else alert('username not found');
     }
 
