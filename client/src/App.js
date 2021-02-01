@@ -21,7 +21,7 @@ function App() {
     </button>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        <a class="nav-link" href="/">Sign out</a>
       </li>
     </ul>
   </header>
