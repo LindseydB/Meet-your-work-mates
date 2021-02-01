@@ -55,8 +55,8 @@ function App() {
 
         </div>
 
-        <Route path='/' exact component={Home} />
-        <Route path='/register' exact component={LoginRegister} />
+        <Route path='/' exact component={LoginRegister} />
+        <Route path='/register' exact component={Home} />
 
       </main>
     </div>
