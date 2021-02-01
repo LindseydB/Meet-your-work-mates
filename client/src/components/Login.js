@@ -16,6 +16,38 @@ class Login extends React.Component {
 
     }
 
+
+    onChangeCheckbox = event => {
+
+        console.log(event.target.checked);
+            this.setState({
+                isChecked: event.target.checked
+            });
+        }
+    
+
+    onSubmitForm = (e) => {
+        e.preventDefault();
+        var username = e.target.elements.inputEmail.value;
+        var password = e.target.elements.inputPassword.value;
+        
+
+        let hardcodedCred = {
+            email: 'test.user@ibm.co.nz',
+            password: 'password123'
+        }
+    
+        if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
+            //correct combination for login
+            const token = '211333714swen';
+            sessionStorage.setItem('auth-token', token);
+            this.props.history.push("/create")
+        } else if ((username == hardcodedCred.email) && (password !== hardcodedCred.password)) {
+            //bad combination
+            alert('incorrect password');
+        }else alert('username not found');
+    }
+
     render() {
 
         return (
