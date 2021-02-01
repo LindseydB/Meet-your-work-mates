@@ -69,41 +69,41 @@ export default class Register extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>First name: </label>
-                        <input type="text" 
-                        className="form-control" 
-                        value={this.state.first_name} 
+                        <input type="text"
+                        className="form-control"
+                        value={this.state.first_name}
                         onChange={this.onChangeFirstName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Last name: </label>
-                        <input type="text" 
-                        className="form-control" 
-                        value={this.state.last_name} 
+                        <input type="text"
+                        className="form-control"
+                        value={this.state.last_name}
                         onChange={this.onChangeLastName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Password: </label>
-                        <input type="password" 
-                        className="form-control" 
-                        value={this.state.password} 
+                        <input type="password"
+                        className="form-control"
+                        value={this.state.password}
                         onChange={this.onChangePassword}
                         />
                     </div>
                     <div className="form-group">
                         <label>Email: </label>
-                        <input type="text" 
-                        className="form-control" 
-                        value={this.state.email} 
+                        <input type="text"
+                        className="form-control"
+                        value={this.state.email}
                         onChange={this.onChangeEmail}
                         />
                     </div>
                     <div className="form-group">
                         <label>Phone number: </label>
-                        <input type="text" 
-                        className="form-control" 
-                        value={this.state.phone_number} 
+                        <input type="text"
+                        className="form-control"
+                        value={this.state.phone_number}
                         onChange={this.onChangePhonenumber}
                         />
                     </div>
