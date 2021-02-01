@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# File containing Atlas password
+server/atlas.json
