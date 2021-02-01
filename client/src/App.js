@@ -4,6 +4,9 @@ import "./bootstrap/css/bootstrap.min.css";
 
 import EventList from "./components/event-list.component.js"
 import Home from "./components/home/home.component.js"
+import Register from "./components/register.component.js"
+
+
 
 
 
@@ -54,6 +57,7 @@ function App() {
       </div>
 
       <Route path='/' exact component={Home} />
+      <Route path='/register' exact component={Register} />
 
     </main>
   </div>
