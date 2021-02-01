@@ -6,6 +6,8 @@ import "./bootstrap/css/bootstrap.min.css";
 import EventList from "./components/home/event-list.component.js"
 import Home from "./components/home/home.component.js"
 import Register from "./components/Register.js"
+import Login from "./components/Login.js"
+
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
 
       <Route path='/' exact component={Home} />
       <Route path='/register' exact component={Register} />
+      <Route path='/login' exact component={Login} />
+
 
     </main>
   </div>
