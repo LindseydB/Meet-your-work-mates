@@ -10,7 +10,7 @@ import LoginRegister from "./components/LoginRegister.js";
 
 function App() {
   var currentLocation = window.location.pathname;
-  if(currentLocation == "/"){
+  if(currentLocation == "/dashboard"){
     return (
       <Router>
 
@@ -56,7 +56,7 @@ function App() {
         </div>
 
         <Route path='/' exact component={LoginRegister} />
-        <Route path='/register' exact component={Home} />
+        <Route path='/dashboard' exact component={Home} />
 
       </main>
     </div>
