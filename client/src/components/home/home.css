@@ -5,6 +5,25 @@
   height:180px;
   float:left;
   margin:1%;
+  padding-top:35px;
 
+
+}
+
+.profileimg{
+  height:110px;
+  width:110px;
+  background:#ffffff;
+  border-radius:120px;
+  margin:0 15px;
+}
+
+.meetup{
+
+  background:#eeeeee;
+  width:420px;
+  height:240px;
+  float:left;
+  margin:1%;
 
 }
