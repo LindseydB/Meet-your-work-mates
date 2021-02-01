@@ -105,3 +105,5 @@ dist
 
 # File containing Atlas password
 server/atlas.json
+
+.DS_Store
