@@ -27,3 +27,18 @@
   margin:1%;
 
 }
+
+.eventtitle, .eventinfo{
+  margin:15px;
+}
+
+.eventtitle{
+  font-size:17px;
+  font-weight:bold;
+}
+
+.eventimage{
+  height:170px;
+  width:100%;
+  background:#e0dfdf;
+}
