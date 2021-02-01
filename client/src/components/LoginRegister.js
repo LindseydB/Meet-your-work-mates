@@ -8,15 +8,15 @@ export default class LoginRegister extends Component{
     return(
       <div>
         <div class="row">
-          <div class="col-6">
-              <Register />
-          </div>
-          <div class="col-6">
+          <div class="col-6 loginregister">
+            <h2 class="heading">Sign in to Account</h2>
             <Login />
             </div>
-        </div>
-
-
+            <div class="col-6 registerbg loginregister">
+              <h2 class="heading">New to IBM? Welcome.</h2>
+              <Register />
+                </div>
+              </div>
       </div>
     )
   }
