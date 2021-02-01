@@ -13,10 +13,10 @@ let Mate = new Schema({
     },
     job: {
         type: String
-    },
-    interests: [{
-        type:  String
-    }]
+    }
+    //interests: [{
+    //    type:  String
+    //}]
 
 });
 
