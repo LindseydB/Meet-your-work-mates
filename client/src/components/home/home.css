@@ -6,9 +6,21 @@
   float:left;
   margin:1%;
   padding-top:35px;
+  border:3px solid #ffffff;
 
 
 }
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+.col-5{flex:0!important;}
 
 .profileimg{
   height:110px;
@@ -41,4 +53,9 @@
   height:170px;
   width:100%;
   background:#e0dfdf;
+}
+
+
+.scrolling-wrapper{
+	overflow-x: auto;
 }
