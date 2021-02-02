@@ -68,7 +68,7 @@ export default class CreateTodo extends Component{
         </div>
 
         <div class="row">
-          <div class="col-12">
+          <div class="col-12"><br />
             <h1 class="h2">Meet-ups</h1><br />
             <div class="sidescroll">
               <MeetupList />

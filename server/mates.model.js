@@ -10,14 +10,13 @@ let Mate = new Schema({
     },
     mobile: {
         type: String
-    }
-    //job: {
-    //    type: String
-    //}
-    //interests: [{
-    //    type:  String
-    //}]
-
+    },
+    password: {
+        type:  String
+    },
+    interests: [{
+        type: String
+    }]
 });
 
 module.exports = mongoose.model('Mate', Mate);

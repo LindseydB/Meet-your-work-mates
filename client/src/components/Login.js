@@ -24,26 +24,26 @@ class Login extends React.Component {
                 isChecked: event.target.checked
             });
         }
-    
+
 
     onSubmitForm = (e) => {
         e.preventDefault();
         var username = e.target.elements.inputEmail.value;
         var password = e.target.elements.inputPassword.value;
-        
+
 
         let hardcodedCred = {
             email: 'test.user@ibm.co.nz',
             password: 'password123'
         }
-    
-        if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
+
+        if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
             //correct combination for login
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
-            this.props.history.push("/")
+            this.props.history.push("/dashboard");
 
-        } else if ((username == hardcodedCred.email) && (password !== hardcodedCred.password)) {
+        } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
             //bad combination
             alert('incorrect password');
 
@@ -54,11 +54,11 @@ class Login extends React.Component {
 
         return (
             <div>
-              
+
                 <div>
                     <form method="post" onSubmit={this.onSubmitForm}>
 
-                        <label for="inputEmail"> Username or Email</label>
+                        <label for="inputEmail"> Email</label>
                         <input type="email"
                             name="inputEmail"
                             placeholder="user@ibm.co.nz"
@@ -70,6 +70,8 @@ class Login extends React.Component {
                             placeholder="password"
                             required onChange={this.onChange} />
 
+
+                        <div class="hide"> //div to hide elements - you can remove this after our presentation :)
                         <div>
                             <label for="remember">Remember me</label>
                             <input type="checkbox" //checked={isChecked}
@@ -77,9 +79,19 @@ class Login extends React.Component {
                             <a href={"https://google.com"}>Forgot password?</a>
                         </div>
 
-                        <button onSubmit={this.onSubmitForm}>Sign In</button>
+
+
+                <button onSubmit={this.onSubmitForm}>Sign In</button>
+                <br />
+                <br />
+                <br />
+                </div>
 
                     </form>
+
+                      <div class="space">
+                      </div>
+                      <a href="/dashboard" class="demobtn">Sign In</a>
 
                 </div>
 

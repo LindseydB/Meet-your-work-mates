@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const matesRoutes = express.Router();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 let atlasString = require('./atlas.json');
 
 let Mates = require('./mates.model');
@@ -45,8 +45,7 @@ matesRoutes.post('/update/:id',function(req, res) {
             mate.email = req.body.email;
             mate.name = req.body.name;
             mate.mobile = req.body.mobile;
-            mate.job = req.body.job;
-            mate.interests = req.body.interests;
+            mate.password = req.body.password;
 
             mate.save().then(mate => {
                 res.json('Mate updated!');
