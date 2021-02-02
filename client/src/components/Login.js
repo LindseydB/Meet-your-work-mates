@@ -37,13 +37,13 @@ class Login extends React.Component {
             password: 'password123'
         }
 
-        if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
+        if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
             //correct combination for login
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
-            this.props.history.push("/")
+            this.props.history.push("/dashboard");
 
-        } else if ((username == hardcodedCred.email) && (password !== hardcodedCred.password)) {
+        } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
             //bad combination
             alert('incorrect password');
 
@@ -71,7 +71,7 @@ class Login extends React.Component {
                             required onChange={this.onChange} />
 
 
-                      <div class="hide"> //div to hide elements - you can remove this after our presentation :)
+                        <div class="hide"> //div to hide elements - you can remove this after our presentation :)
                         <div>
                             <label for="remember">Remember me</label>
                             <input type="checkbox" //checked={isChecked}
