@@ -17,7 +17,7 @@
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: #eeeeee;
 }
 
 .col-5{flex:0!important;}
