@@ -11,8 +11,11 @@ let Mate = new Schema({
     mobile: {
         type: String
     },
-    password: [{
+    password: {
         type:  String
+    },
+    interests: [{
+        type: String
     }]
 });
 
