@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 export default class Register extends Component {
@@ -13,10 +13,10 @@ export default class Register extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            first_name:'',
-            last_name:'',
-            password:'',
-            email:'',
+            first_name: '',
+            last_name: '',
+            password: '',
+            email: '',
             phone_number: ''
         }
     }
@@ -54,71 +54,79 @@ export default class Register extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        const newMate = {
-            name: this.state.first_name + " " + this.state.last_name,
-            email: this.state.email,
-            mobile: this.state.phone_number
+        if (this.state.first_name != ""
+            && this.state.last_name != ""
+            && this.state.email != ""
+            && this.state.phone_number != ""
+            && this.state.password != "") {
+
+            const newMate = {
+                name: this.state.first_name + " " + this.state.last_name,
+                email: this.state.email,
+                mobile: this.state.phone_number,
+                password: this.state.password
+            }
+
+            axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
+                .then(res => console.log(res.data));
+
+            this.setState({
+                first_name: '',
+                last_name: '',
+                password: '',
+                email: '',
+                phone_number: ''
+            })
         }
-
-        axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
-            .then(res => console.log(res.data));
-
-        this.setState({
-            first_name:'',
-            last_name:'',
-            password:'',
-            email:'',
-            phone_number: ''
-        })
     }
 
     render() {
         return (
-            <div style={{marginTop: 20}}>
+            <div style={{ marginTop: 20 }}>
                 <h3>Register</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>First name: </label>
                         <input type="text"
-                        className="form-control"
-                        value={this.state.first_name}
-                        onChange={this.onChangeFirstName}
+                            className="form-control"
+                            value={this.state.first_name}
+                            onChange={this.onChangeFirstName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Last name: </label>
                         <input type="text"
-                        className="form-control"
-                        value={this.state.last_name}
-                        onChange={this.onChangeLastName}
+                            className="form-control"
+                            value={this.state.last_name}
+                            onChange={this.onChangeLastName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Password: </label>
                         <input type="password"
-                        className="form-control"
-                        value={this.state.password}
-                        onChange={this.onChangePassword}
+                            className="form-control"
+                            value={this.state.password}
+                            onChange={this.onChangePassword}
                         />
                     </div>
                     <div className="form-group">
                         <label>Email: </label>
                         <input type="text"
-                        className="form-control"
-                        value={this.state.email}
-                        onChange={this.onChangeEmail}
+                            className="form-control"
+                            value={this.state.email}
+                            onChange={this.onChangeEmail}
                         />
                     </div>
                     <div className="form-group">
                         <label>Phone number: </label>
                         <input type="text"
-                        className="form-control"
-                        value={this.state.phone_number}
-                        onChange={this.onChangePhonenumber}
+                            className="form-control"
+                            value={this.state.phone_number}
+                            onChange={this.onChangePhonenumber}
                         />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Register" className = "btn btn-primary"/>
+                        <input type="submit" value="Register" className="btn btn-primary" />
                     </div>
                 </form>
             </div>

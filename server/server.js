@@ -45,8 +45,7 @@ matesRoutes.post('/update/:id',function(req, res) {
             mate.email = req.body.email;
             mate.name = req.body.name;
             mate.mobile = req.body.mobile;
-            mate.job = req.body.job;
-            mate.interests = req.body.interests;
+            mate.password = req.body.password;
 
             mate.save().then(mate => {
                 res.json('Mate updated!');
