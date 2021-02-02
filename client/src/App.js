@@ -10,18 +10,18 @@ import LoginRegister from "./components/LoginRegister.js";
 
 function App() {
   var currentLocation = window.location.pathname;
-  if(currentLocation == "/"){
+  if(currentLocation === "/dashboard"){
     return (
       <Router>
 
       <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Meet Your Workmates</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#">Meet Your Workmates</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        <a class="nav-link" href="/">Sign out</a>
       </li>
     </ul>
   </header>
@@ -32,7 +32,7 @@ function App() {
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/dashboard" className="nav-link">Home</Link>
             </li>
             <li class="nav-item">
               <Link to="/create" className="nav-link">Search</Link>
@@ -55,8 +55,8 @@ function App() {
 
         </div>
 
-        <Route path='/' exact component={Home} />
-        <Route path='/register' exact component={LoginRegister} />
+        <Route path='/' exact component={LoginRegister} />
+        <Route path='/dashboard' exact component={Home} />
 
       </main>
     </div>
@@ -69,7 +69,7 @@ function App() {
       <Router>
 
       <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Meet Your Workmates</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#">Meet Your Workmates</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

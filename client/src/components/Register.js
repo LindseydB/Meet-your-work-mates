@@ -55,9 +55,9 @@ export default class Register extends Component {
         e.preventDefault();
 
         const newMate = {
-            name: this.first_name + " " + this.last_name,
-            email: this.email,
-            mobile: this.mobile
+            name: this.state.first_name + " " + this.state.last_name,
+            email: this.state.email,
+            mobile: this.state.phone_number
         }
 
         axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
