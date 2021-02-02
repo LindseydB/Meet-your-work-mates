@@ -58,7 +58,7 @@ class Login extends React.Component {
                 <div>
                     <form method="post" onSubmit={this.onSubmitForm}>
 
-                        <label for="inputEmail"> Username or Email</label>
+                        <label for="inputEmail"> Email</label>
                         <input type="email"
                             name="inputEmail"
                             placeholder="user@ibm.co.nz"
