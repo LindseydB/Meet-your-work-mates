@@ -11,13 +11,9 @@ let Mate = new Schema({
     mobile: {
         type: String
     },
-    //job: {
-    //    type: String
-    //}
-    interests: [{
+    password: [{
         type:  String
     }]
-
 });
 
 module.exports = mongoose.model('Mate', Mate);
