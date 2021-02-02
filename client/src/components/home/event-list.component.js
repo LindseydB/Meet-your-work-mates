@@ -7,7 +7,8 @@ export default class EventList extends Component{
 
       <div class="container-fluid">
           <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
-      			<div class="col-5">
+
+          <div class="events">
             <div class="event">
               <div class="row">
                 <div class="col-4">
@@ -22,10 +23,9 @@ export default class EventList extends Component{
                   </div>
                 </div>
             </div>
-      		</div>
+          </div>
 
-
-          <div class="col-5">
+        <div class="events">
           <div class="event">
             <div class="row">
               <div class="col-4">
@@ -42,8 +42,7 @@ export default class EventList extends Component{
           </div>
         </div>
 
-
-        <div class="col-5">
+      <div class="events">
         <div class="event">
           <div class="row">
             <div class="col-4">
@@ -60,8 +59,7 @@ export default class EventList extends Component{
         </div>
       </div>
 
-
-      <div class="col-5">
+    <div class="events">
       <div class="event">
         <div class="row">
           <div class="col-4">
@@ -78,7 +76,7 @@ export default class EventList extends Component{
       </div>
     </div>
 
-    <div class="col-5">
+<div class="events">
     <div class="event">
       <div class="row">
         <div class="col-4">
@@ -96,8 +94,7 @@ export default class EventList extends Component{
   </div>
 
 
-
-      <div class="col-5">
+    <div class="events">
       <div class="event">
         <div class="row">
           <div class="col-4">

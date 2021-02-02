@@ -1,4 +1,7 @@
-
+.custom-toggler,button{
+  border:unset !important;
+  border:none;
+}
 .heading{
   margin: 5% 0 7% 0;
 }
