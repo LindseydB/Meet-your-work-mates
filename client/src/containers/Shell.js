@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import Home from "./pages/Home/Home.js"
 import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
+import Search from "./pages/Search/Search.js"
 
 const Shell = ({location}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -30,7 +31,7 @@ const Shell = ({location}) => {
 
             <div className="container-fluid">
                 <div className="row">
-                    {location.pathname === '/dashboard' ? <Navigation isNavCollapsed={isNavCollapsed}/> : null}
+                    {location.pathname === '/' ? null : <Navigation isNavCollapsed={isNavCollapsed}/>}
                     <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                         <div className="d-flex">
 
@@ -38,6 +39,7 @@ const Shell = ({location}) => {
 
                         <Route path='/' exact component={LoginRegister} />
                         <Route path='/dashboard' exact component={Home} />
+                        <Route path='/search' exact component={Search} />
 
                     </main>
                 </div>
