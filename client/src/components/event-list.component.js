@@ -5,17 +5,17 @@ export default class EventList extends Component{
     return(
       <div>
 
-      <div class="container-fluid">
-          <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+      <div className="container-fluid">
+          <div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
 
-          <div class="events">
-            <div class="event">
-              <div class="row">
-                <div class="col-4">
-                  <div class="profileimg">
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-4">
+                  <div className="profileimg">
                   </div>
                 </div>
-               <div class="col-8">
+               <div className="col-8">
                   <p><strong>Name<br />
                   123 Somewhere rd<br />
                   12pm<br />
@@ -25,14 +25,14 @@ export default class EventList extends Component{
             </div>
           </div>
 
-        <div class="events">
-          <div class="event">
-            <div class="row">
-              <div class="col-4">
-                <div class="profileimg">
+        <div className="events">
+          <div className="event">
+            <div className="row">
+              <div className="col-4">
+                <div className="profileimg">
                 </div>
               </div>
-             <div class="col-8">
+             <div className="col-8">
                 <p><strong>Name<br />
                 123 Somewhere rd<br />
                 12pm<br />
@@ -42,14 +42,14 @@ export default class EventList extends Component{
           </div>
         </div>
 
-      <div class="events">
-        <div class="event">
-          <div class="row">
-            <div class="col-4">
-              <div class="profileimg">
+      <div className="events">
+        <div className="event">
+          <div className="row">
+            <div className="col-4">
+              <div className="profileimg">
               </div>
             </div>
-           <div class="col-8">
+           <div className="col-8">
               <p><strong>Name<br />
               123 Somewhere rd<br />
               12pm<br />
@@ -59,14 +59,14 @@ export default class EventList extends Component{
         </div>
       </div>
 
-    <div class="events">
-      <div class="event">
-        <div class="row">
-          <div class="col-4">
-            <div class="profileimg">
+    <div className="events">
+      <div className="event">
+        <div className="row">
+          <div className="col-4">
+            <div className="profileimg">
             </div>
           </div>
-         <div class="col-8">
+         <div className="col-8">
             <p><strong>Name<br />
             123 Somewhere rd<br />
             12pm<br />
@@ -76,14 +76,14 @@ export default class EventList extends Component{
       </div>
     </div>
 
-<div class="events">
-    <div class="event">
-      <div class="row">
-        <div class="col-4">
-          <div class="profileimg">
+<div className="events">
+    <div className="event">
+      <div className="row">
+        <div className="col-4">
+          <div className="profileimg">
           </div>
         </div>
-       <div class="col-8">
+       <div className="col-8">
           <p><strong>Name<br />
           123 Somewhere rd<br />
           12pm<br />
@@ -94,14 +94,14 @@ export default class EventList extends Component{
   </div>
 
 
-    <div class="events">
-      <div class="event">
-        <div class="row">
-          <div class="col-4">
-            <div class="profileimg">
+    <div className="events">
+      <div className="event">
+        <div className="row">
+          <div className="col-4">
+            <div className="profileimg">
             </div>
           </div>
-         <div class="col-8">
+         <div className="col-8">
             <p><strong>Name<br />
             123 Somewhere rd<br />
             12pm<br />
