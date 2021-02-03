@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import EventList from "../../../components/event-list.component.js"
-import MeetupList from "../../../components/meetups-list.component.js"
+import EventList from "../../../components/EventList/EventList.js"
+import MeetupList from "../../../components/MeetupsList/MeetupsList.js"
 
 import "./home.css";
 

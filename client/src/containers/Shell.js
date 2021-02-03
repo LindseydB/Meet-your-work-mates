@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
-import Home from "./pages/Home/home.component.js"
-import LoginRegister from "./pages/LoginRegister.js";
+import Home from "./pages/Home/Home.js"
+import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
 

@@ -34,7 +34,7 @@ class Login extends React.Component {
             password: 'password123'
         }
 
-        if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
+        if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
             // this.props.router.push('/dashboard');
@@ -42,7 +42,7 @@ class Login extends React.Component {
             // history.push('/dashboard');
             // <Link to = "/dashboard"/>;
 
-        } else if ((username == hardcodedCred.email) && (password != hardcodedCred.password)) {
+        } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
             alert('incorrect password');
 
         } else alert('username not found');
