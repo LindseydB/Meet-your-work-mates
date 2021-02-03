@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = ({isNavCollapsed}) => {
     return (
@@ -13,7 +13,7 @@ const Navigation = ({isNavCollapsed}) => {
                             <Link to="/dashboard" className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/create" className="nav-link">Search</Link>
+                            <Link to="/search" className="nav-link">Search</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/create" className="nav-link">Calendar</Link>
