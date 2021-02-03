@@ -27,11 +27,8 @@ const Navigation = ({isNavCollapsed}) => {
                     </ul>
                 </div>
             </div>
-
         </nav>
-
     </div>
-
     )
 }
 
