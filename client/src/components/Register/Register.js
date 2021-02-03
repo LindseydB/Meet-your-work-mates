@@ -56,6 +56,7 @@ export default class Register extends Component {
 
         const newMate = {
             name: this.state.first_name + " " + this.state.last_name,
+            _id: this.state.email,
             email: this.state.email,
             mobile: this.state.phone_number,
             password: this.state.password
