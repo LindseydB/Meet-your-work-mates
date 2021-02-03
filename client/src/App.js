@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import './css/App.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import "./bootstrap/css/bootstrap.min.css";

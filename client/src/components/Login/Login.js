@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Login extends React.Component {
 
@@ -13,7 +12,7 @@ class Login extends React.Component {
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
-        console.log(this.props.parent_props);
+        console.log(this.props.parent_history);
     }
 
     onChangeCheckbox = event => {
@@ -38,7 +37,7 @@ class Login extends React.Component {
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
             // this.props.router.push('/dashboard');
-            this.props.parent_props.history.push('/dashboard');
+            this.props.parent_history.push('/dashboard');
             // history.push('/dashboard');
             // <Link to = "/dashboard"/>;
 
