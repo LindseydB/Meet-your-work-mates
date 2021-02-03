@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Login extends React.Component {
 
     constructor(props) {
@@ -13,41 +12,35 @@ class Login extends React.Component {
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
-
     }
-
 
     onChangeCheckbox = event => {
 
         console.log(event.target.checked);
-            this.setState({
-                isChecked: event.target.checked
-            });
-        }
-
+        this.setState({
+            isChecked: event.target.checked
+        });
+    }
 
     onSubmitForm = (e) => {
         e.preventDefault();
-        var username = e.target.elements.inputEmail.value;
-        var password = e.target.elements.inputPassword.value;
-
+        let username = e.target.elements.inputEmail.value;
+        let password = e.target.elements.inputPassword.value;
 
         let hardcodedCred = {
-            email: 'test.user@ibm.co.nz',
+            email: 'test.user@test.co.nz',
             password: 'password123'
         }
 
-        if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
-            //correct combination for login
+        if ((username == hardcodedCred.email) && (password == hardcodedCred.password)) {
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
             this.props.history.push("/dashboard");
 
-        } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
-            //bad combination
+        } else if ((username == hardcodedCred.email) && (password != hardcodedCred.password)) {
             alert('incorrect password');
 
-        }else alert('username not found');
+        } else alert('username not found');
     }
 
     render() {
@@ -57,11 +50,10 @@ class Login extends React.Component {
 
                 <div>
                     <form method="post" onSubmit={this.onSubmitForm}>
-
                         <label for="inputEmail"> Email</label>
                         <input type="email"
                             name="inputEmail"
-                            placeholder="user@ibm.co.nz"
+                            placeholder="user@test.co.nz"
                             required onChange={this.onChange} />
 
                         <label for="inputPassword">Password</label>
@@ -70,8 +62,6 @@ class Login extends React.Component {
                             placeholder="password"
                             required onChange={this.onChange} />
 
-
-                        <div class="hide"> //div to hide elements - you can remove this after our presentation :)
                         <div>
                             <label for="remember">Remember me</label>
                             <input type="checkbox" //checked={isChecked}
@@ -79,27 +69,12 @@ class Login extends React.Component {
                             <a href={"https://google.com"}>Forgot password?</a>
                         </div>
 
-
-
-                <button onSubmit={this.onSubmitForm}>Sign In</button>
-                <br />
-                <br />
-                <br />
-                </div>
+                        <button onSubmit={this.onSubmitForm}>Sign In</button>
 
                     </form>
-
-                      <div class="space">
-                      </div>
-                      <a href="/dashboard" class="demobtn">Sign In</a>
-
                 </div>
-
             </div>
-
         )
-
-
     }
 }
 export default Login

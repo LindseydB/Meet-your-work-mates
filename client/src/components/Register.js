@@ -54,30 +54,23 @@ export default class Register extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        if (this.state.first_name != ""
-            && this.state.last_name != ""
-            && this.state.email != ""
-            && this.state.phone_number != ""
-            && this.state.password != "") {
-
-            const newMate = {
-                name: this.state.first_name + " " + this.state.last_name,
-                email: this.state.email,
-                mobile: this.state.phone_number,
-                password: this.state.password
-            }
-
-            axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
-                .then(res => console.log(res.data));
-
-            this.setState({
-                first_name: '',
-                last_name: '',
-                password: '',
-                email: '',
-                phone_number: ''
-            })
+        const newMate = {
+            name: this.state.first_name + " " + this.state.last_name,
+            email: this.state.email,
+            mobile: this.state.phone_number,
+            password: this.state.password
         }
+
+        axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', newMate)
+            .then(res => console.log(res.data));
+
+        this.setState({
+            first_name: '',
+            last_name: '',
+            password: '',
+            email: '',
+            phone_number: ''
+        })
     }
 
     render() {
@@ -90,7 +83,7 @@ export default class Register extends Component {
                         <input type="text"
                             className="form-control"
                             value={this.state.first_name}
-                            onChange={this.onChangeFirstName}
+                            required onChange={this.onChangeFirstName}
                         />
                     </div>
                     <div className="form-group">
@@ -98,7 +91,7 @@ export default class Register extends Component {
                         <input type="text"
                             className="form-control"
                             value={this.state.last_name}
-                            onChange={this.onChangeLastName}
+                            required onChange={this.onChangeLastName}
                         />
                     </div>
                     <div className="form-group">
@@ -106,7 +99,7 @@ export default class Register extends Component {
                         <input type="password"
                             className="form-control"
                             value={this.state.password}
-                            onChange={this.onChangePassword}
+                            required onChange={this.onChangePassword}
                         />
                     </div>
                     <div className="form-group">
@@ -114,7 +107,7 @@ export default class Register extends Component {
                         <input type="text"
                             className="form-control"
                             value={this.state.email}
-                            onChange={this.onChangeEmail}
+                            required onChange={this.onChangeEmail}
                         />
                     </div>
                     <div className="form-group">
@@ -122,7 +115,7 @@ export default class Register extends Component {
                         <input type="text"
                             className="form-control"
                             value={this.state.phone_number}
-                            onChange={this.onChangePhonenumber}
+                            required onChange={this.onChangePhonenumber}
                         />
                     </div>
                     <div className="form-group">
