@@ -12,7 +12,6 @@ class Login extends React.Component {
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
-        console.log(this.props.parent_history);
     }
 
     onChangeCheckbox = event => {
@@ -36,10 +35,7 @@ class Login extends React.Component {
         if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
             const token = '211333714swen';
             sessionStorage.setItem('auth-token', token);
-            // this.props.router.push('/dashboard');
             this.props.parent_history.push('/dashboard');
-            // history.push('/dashboard');
-            // <Link to = "/dashboard"/>;
 
         } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
             alert('incorrect password');
@@ -53,7 +49,7 @@ class Login extends React.Component {
             <div>
 
                 <div>
-                    <form method="post" onSubmit={this.onSubmitForm}>
+                    <form onSubmit={this.onSubmitForm}>
                         <label for="inputEmail"> Email</label>
                         <input type="email"
                             name="inputEmail"
@@ -73,7 +69,9 @@ class Login extends React.Component {
                             <a href={"https://google.com"}>Forgot password?</a>
                         </div>
 
-                        <button onSubmit={this.onSubmitForm}>Sign In</button>
+                        <div className="form-group">
+                            <input type="submit" value="Search" className="btn btn-primary" />
+                        </div>
 
                     </form>
                 </div>
