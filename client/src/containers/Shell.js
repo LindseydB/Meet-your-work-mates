@@ -22,7 +22,9 @@ const Shell = ({location}) => {
                     </li>
                 </ul>
                 <div className="navbar-expand-sm">
-                    <div className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+                    <div className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded={!isNavCollapsed ? 
+                    true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                         <span className="navbar-toggler-icon"></span>
                     </div>
                 </div>
