@@ -70,7 +70,7 @@ class Login extends React.Component {
                         </div>
 
                         <div className="form-group">
-                            <input type="submit" value="Search" className="btn btn-primary" />
+                            <input type="submit" value="Login" className="btn btn-primary" />
                         </div>
 
                     </form>
