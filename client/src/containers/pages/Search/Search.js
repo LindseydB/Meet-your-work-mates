@@ -32,6 +32,7 @@ const Search = () => {
                         <input type="submit" value="Search" className="btn btn-primary" />
                     </div>
                 </form>
+                <h2>Suggested teammates:</h2>
             </div>
         </React.Fragment>
     )
