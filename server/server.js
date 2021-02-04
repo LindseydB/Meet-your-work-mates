@@ -4,10 +4,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const matesRoutes = express.Router();
+const meetupRoutes = express.Router();
 const PORT = process.env.PORT || 4000;
 let atlasString = require('./atlas.json');
 
 let Mates = require('./mates.model');
+let Meetup = require('./meetup.model');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -60,14 +62,33 @@ matesRoutes.post('/add', function(req, res) {
     let mate = new Mates(req.body);
     mate.save()
         .then(mate => {
-            res.status(200).json({'mate': 'mate added successfully'});
+            res.status(200).json({'meetup': 'meetup added successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('adding new meetup failed');
+        });
+});
+
+meetupRoutes.get('/:email', function (req, res) {
+    let email = req.params.email;
+    Meetup.find({ "inviter": email }, function (err, meetup) {
+        res.json(meetup)
+    })
+})
+
+meetupRoutes.add('/add', function (req, res) {
+    let meetup = new Meetup(req.body);
+    meetup.save()
+        .then(meetup => {
+            res.status(200).json({ 'mate': 'mate added successfully' });
         })
         .catch(err => {
             res.status(400).send('adding new mate failed');
         });
-});
+}
 
 app.use('/meet_mates', matesRoutes);
+app.use('/meetup_invites', meetupRoutes);
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);

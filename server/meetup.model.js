@@ -1,30 +1,27 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let Mate = new Schema({
-    _id: {
+let Meetup = new Schema({
+    inviter: {
         type: String,
         required: true
     },
-    email: {
+    invitee: {
         type: String,
         required: true
     },
-    name: {
+    meetupTime: {
+        type: Date,
+        required: true
+    },
+    meetupPlace: {
         type: String,
         required: true
     },
-    mobile: {
-        type: String,
+    confirmed: {
+        type: Boolean,
         required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    interests: [{
-        type: String
-    }]
+    }
 });
 
-module.exports = mongoose.model('Mate', Mate);
+module.exports = mongoose.model('Meetup', Meetup);
