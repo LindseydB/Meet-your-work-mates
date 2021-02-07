@@ -71,12 +71,12 @@ matesRoutes.post('/add', function(req, res) {
 
 meetupRoutes.get('/:email', function (req, res) {
     let email = req.params.email;
-    Meetup.find({ "inviter": email }, function (err, meetup) {
+    Meetup.find({ "invitee": email }, function (err, meetup) {
         res.json(meetup)
     })
 })
 
-meetupRoutes.add('/add', function (req, res) {
+meetupRoutes.post('/add', function (req, res) {
     let meetup = new Meetup(req.body);
     meetup.save()
         .then(meetup => {
@@ -85,7 +85,26 @@ meetupRoutes.add('/add', function (req, res) {
         .catch(err => {
             res.status(400).send('adding new mate failed');
         });
-}
+});
+
+meetupRoutes.get('/accept/:inviter/:invitee', function (req, res) {
+    Meetup.findOne({ "inviter": req.params.inviter, "invitee": req.params.invitee }, function (err, meetup) {
+        if (!meetup)
+            res.status(404).send("data is not found");
+        else
+            meetup.confirmed = true
+        meetup.save().then(meetup => {
+            res.json('Meetup accepted!');
+        })
+        .catch(err => {
+            res.status(400).send("Update not possible");
+        });
+    })
+})
+
+meetupRoutes.get('reject/:inviter/:invitee', function (req, res) {
+    Meetup.findOneAndDelete({ "inviter": req.params.inviter, "invitee": req.params.invitee });
+});
 
 app.use('/meet_mates', matesRoutes);
 app.use('/meetup_invites', meetupRoutes);
