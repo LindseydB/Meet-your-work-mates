@@ -2,6 +2,15 @@
   border:unset !important;
   border:none;
 }
+
+ul.navbar-nav{
+  width:50px!important;
+  right:0!important;
+  position:absolute!important;
+  margin-right:40px!important;
+}
+
+
 .heading{
   margin: 5% 0 7% 0;
 }

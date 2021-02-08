@@ -1,0 +1,32 @@
+{
+  "name": "meet-your-work-mates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "husky": "^4.3.8"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dylan-Davy/Meet-your-work-mates.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dylan-Davy/Meet-your-work-mates/issues"
+  },
+  "homepage": "https://github.com/Dylan-Davy/Meet-your-work-mates#readme"
+}

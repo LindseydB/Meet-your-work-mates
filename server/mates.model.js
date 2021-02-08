@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Mate = new Schema({
+    _id: {
+        type: String
+    },
     email: {
         type: String
     },

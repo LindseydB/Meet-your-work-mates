@@ -1,0 +1,88 @@
+.event{
+
+  background:#eeeeee;
+  width:420px;
+  height:180px;
+  float:left;
+  margin:0 10px;
+  padding-top:35px;
+  border:3px solid #ffffff;
+
+}
+
+.meetups{
+  margin:0 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #eeeeee;
+}
+
+
+.profileimg{
+  height:110px;
+  width:110px;
+  background:#ffffff;
+  border-radius:120px;
+  margin:0 15px;
+}
+
+.meetup{
+
+  background:#eeeeee;
+  width:420px;
+  height:240px;
+  float:left;
+  margin:1%;
+
+}
+
+.eventtitle, .eventinfo{
+  margin:15px;
+}
+
+.eventtitle{
+  font-size:17px;
+  font-weight:bold;
+}
+
+.eventimage{
+  height:170px;
+  width:100%;
+  background:#e0dfdf;
+}
+
+
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+
+
+.bg-light {
+    background-color: #f8f9fa!important;
+    margin-top: 65px;
+    z-index:999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+
+  @media only screen and (max-width: 800px) {
+
+    .bg-light {
+        background:none!important;
+
+      }
+
+    .flex-column{
+      background:#f8f9fa!important;
+    }
+
+
+}
