@@ -8,9 +8,9 @@ const Home = () => {
     <div>
       <div className="row">
         <div className="col-12"><br />
-          <h1 className="h2">Hi Username, </h1><br />
+          <h1 className="h2">Hi Username, </h1>
           <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</strong></p><br /><br />
-          <h1 className="h2">Upcoming Events</h1>
+          <h1 className="h2">Catch-ups</h1>
           <div className="sidescroll">
             <EventList />
           </div>
@@ -19,7 +19,7 @@ const Home = () => {
 
       <div className="row">
         <div className="col-12"><br />
-          <h1 className="h2">Meet-ups</h1><br />
+          <h1 className="h2">Upcoming events</h1>
           <div className="sidescroll">
             <MeetupList />
           </div>
