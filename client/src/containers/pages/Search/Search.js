@@ -11,6 +11,10 @@ const Search = () => {
         e.preventDefault();
         
         e.target.elements.keywords.value = "";
+
+        if (advancedOptions === true) {
+            advancedButton();
+        }
     }
 
     return (
