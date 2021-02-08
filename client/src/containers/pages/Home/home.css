@@ -61,3 +61,28 @@
 .scrolling-wrapper{
 	overflow-x: auto;
 }
+
+
+.bg-light {
+    background-color: #f8f9fa!important;
+    margin-top: 65px;
+    z-index:999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+
+  @media only screen and (max-width: 800px) {
+
+    .bg-light {
+        background:none!important;
+
+      }
+
+    .flex-column{
+      background:#f8f9fa!important;
+    }
+
+
+}

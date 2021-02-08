@@ -5,8 +5,11 @@ import Login from "../../../components/Login/Login.js"
 const LoginRegister = ({history}) => {
   return (
     <div>
+
+
+
       <div className="row">
-        <div className="col-6 loginregister">
+        <div className="col-6 loginregister offset20">
           <h2 className="heading">Sign in to Account</h2>
           <Login parent_history={history} />
         </div>
@@ -16,7 +19,7 @@ const LoginRegister = ({history}) => {
         </div>
       </div>
     </div>
-  )
+   )
 }
 
 export default LoginRegister
