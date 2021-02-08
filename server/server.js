@@ -67,6 +67,17 @@ matesRoutes.post('/add', function(req, res) {
         });
 });
 
+matesRoutes.post('/login',async(req, res) => {
+  await Mates.find({email:req.body.u_email, password:req.body.u_pwd},(err,mate)=>{
+       if(mate.length === 1) {
+            res.send({login:'success'});
+       } else {
+           res.send({login:'fail'});
+       }
+  });
+});
+
+
 app.use('/meet_mates', matesRoutes);
 
 app.listen(PORT, function() {

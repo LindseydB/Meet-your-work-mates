@@ -4,7 +4,8 @@ import Home from "./pages/Home/Home.js"
 import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
-import Search from "./pages/Search/Search.js"
+import Search from "./pages/Search/Search.js";
+import Profile from "./pages/Profile/Profile.js";
 
 const Shell = ({location}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -42,6 +43,7 @@ const Shell = ({location}) => {
                         <Route path='/' exact component={LoginRegister} />
                         <Route path='/dashboard' exact component={Home} />
                         <Route path='/search' exact component={Search} />
+                        <Route path='/profile' exact component={Profile} />
 
                     </main>
                 </div>
