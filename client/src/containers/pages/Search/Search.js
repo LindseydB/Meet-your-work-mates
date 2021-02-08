@@ -1,14 +1,28 @@
 import React, {useState} from 'react'
 import "../../../bootstrap/css/bootstrap.min.css";
-import AdvancedSearch from "../../../components/AdvancedSearch/AdvancedSearch.js"
+import AdvancedSearch from "../../../components/Search/AdvancedSearch/AdvancedSearch.js";
+import SearchOutput from '../../../components/Search/SearchOutput/SearchOutput';
 
 const Search = () => {
     const [advancedOptions, setAdvancedOptions] = useState(false);
 
     const advancedButton = () => setAdvancedOptions(!advancedOptions);
 
+    const tempSearchArray = [
+        {name: 'test1',
+        role: 'dev',
+        location: 'Wellington'},
+        {name: 'test2',
+        role: 'ba',
+        location: 'Wellington'}
+    ];
+
+    const [searchArray, setSearchArray] = useState([]);
+
     const onSubmit = (e) => {
         e.preventDefault();
+
+        setSearchArray(tempSearchArray);
         
         e.target.elements.keywords.value = "";
 
@@ -16,6 +30,7 @@ const Search = () => {
             advancedButton();
         }
     }
+
 
     return (
         <React.Fragment>
@@ -37,6 +52,7 @@ const Search = () => {
                     </div>
                 </form>
                 <h2>Suggested teammates:</h2>
+                <SearchOutput array={searchArray}/>
             </div>
         </React.Fragment>
     )
