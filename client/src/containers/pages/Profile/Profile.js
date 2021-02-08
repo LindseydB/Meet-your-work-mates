@@ -3,11 +3,10 @@ import React from 'react';
 
 
 const Profile = () => {
- return (  
- 
+ return (
+
  <div>
   <h3>Name</h3>
-<<<<<<< Updated upstream
 </div>
 
 <TextField
@@ -19,12 +18,9 @@ value={this.state.about}
 onChange={this.handleChange('about')}
 />
 </div>
-=======
- </div>
->>>>>>> Stashed changes
 )
 
-    
+
 }
 
 
