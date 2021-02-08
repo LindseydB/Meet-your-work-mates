@@ -6,6 +6,7 @@ import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
 import Search from "./pages/Search/Search.js"
 
+
 const Shell = ({location}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -13,8 +14,8 @@ const Shell = ({location}) => {
 
     return (
         <React.Fragment>
-            <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#">Meet Your Workmates</a>
+            <header className="navbar navbar-dark sticky-top bg-darkr flex-md-nowrap p-0 shadow">
+                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#"><img src="../img/hono_logo.png" alt="Hono Logo" /></a>
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">

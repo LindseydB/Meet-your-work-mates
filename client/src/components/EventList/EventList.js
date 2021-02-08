@@ -11,105 +11,112 @@ export default class EventList extends Component{
           <div className="events">
             <div className="event">
               <div className="row">
-                <div className="col-4">
+                <div className="col-12">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-8">
-                  <p><strong>Name<br />
-                  123 Somewhere rd<br />
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
                   12pm<br />
-                  02/02/2021</strong></p>
+                  02/02/2021</p>
                   </div>
                 </div>
             </div>
           </div>
 
-        <div className="events">
-          <div className="event">
-            <div className="row">
-              <div className="col-4">
-                <div className="profileimg">
+
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-12">
+                  <div className="profileimg">
+                  </div>
                 </div>
-              </div>
-             <div className="col-8">
-                <p><strong>Name<br />
-                123 Somewhere rd<br />
-                12pm<br />
-                02/02/2021</strong></p>
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
+                  12pm<br />
+                  02/02/2021</p>
+                  </div>
                 </div>
-              </div>
-          </div>
-        </div>
-
-      <div className="events">
-        <div className="event">
-          <div className="row">
-            <div className="col-4">
-              <div className="profileimg">
-              </div>
-            </div>
-           <div className="col-8">
-              <p><strong>Name<br />
-              123 Somewhere rd<br />
-              12pm<br />
-              02/02/2021</strong></p>
-              </div>
-            </div>
-        </div>
-      </div>
-
-    <div className="events">
-      <div className="event">
-        <div className="row">
-          <div className="col-4">
-            <div className="profileimg">
             </div>
           </div>
-         <div className="col-8">
-            <p><strong>Name<br />
-            123 Somewhere rd<br />
-            12pm<br />
-            02/02/2021</strong></p>
-            </div>
-          </div>
-      </div>
-    </div>
-
-<div className="events">
-    <div className="event">
-      <div className="row">
-        <div className="col-4">
-          <div className="profileimg">
-          </div>
-        </div>
-       <div className="col-8">
-          <p><strong>Name<br />
-          123 Somewhere rd<br />
-          12pm<br />
-          02/02/2021</strong></p>
-          </div>
-        </div>
-    </div>
-  </div>
 
 
-    <div className="events">
-      <div className="event">
-        <div className="row">
-          <div className="col-4">
-            <div className="profileimg">
+
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-12">
+                  <div className="profileimg">
+                  </div>
+                </div>
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
+                  12pm<br />
+                  02/02/2021</p>
+                  </div>
+                </div>
             </div>
           </div>
-         <div className="col-8">
-            <p><strong>Name<br />
-            123 Somewhere rd<br />
-            12pm<br />
-            02/02/2021</strong></p>
+
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-12">
+                  <div className="profileimg">
+                  </div>
+                </div>
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
+                  12pm<br />
+                  02/02/2021</p>
+                  </div>
+                </div>
             </div>
           </div>
-      </div>
-    </div>
+
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-12">
+                  <div className="profileimg">
+                  </div>
+                </div>
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
+                  12pm<br />
+                  02/02/2021</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
+          <div className="events">
+            <div className="event">
+              <div className="row">
+                <div className="col-12">
+                  <div className="profileimg">
+                  </div>
+                </div>
+               <div className="col-12">
+                  <p class="eventText"><strong>Name</strong><br />
+                  123 Somewhere<br />
+                  12pm<br />
+                  02/02/2021</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
+
+
   </div>
 </div>
 </div>
