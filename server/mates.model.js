@@ -27,4 +27,6 @@ let Mate = new Schema({
     }]
 });
 
+Mate.index({ email: "text", name: "text", mobile: "text", interests: "text" });
+
 module.exports = mongoose.model('Mate', Mate);

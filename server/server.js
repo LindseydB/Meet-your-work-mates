@@ -39,6 +39,18 @@ matesRoutes.get('/:id', function(req, res) {
     });
 });
 
+matesRoutes.get('/search/:searchterm', function (req, res) {
+    let searchterm = req.params.searchterm
+    Mates.find({ $text: { $search: searchterm } }, function (err, mates) {
+        if (err)
+            console.log(err);
+        else if (!mates)
+            res.status(404).send("data is not found");
+        else
+            res.json(mates);
+    });
+});
+
 matesRoutes.post('/update/:id',function(req, res) {
     Mates.findById(req.params.id, function(err, mate) {
         if (!mate)
