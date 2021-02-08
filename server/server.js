@@ -76,14 +76,24 @@ meetupRoutes.get('/:email', function (req, res) {
     })
 })
 
+meetupRoutes.get('/', function (req, res) {
+    Meetup.find( function (err, meetup) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(meetup);
+        }
+    })
+})
+
 meetupRoutes.post('/add', function (req, res) {
     let meetup = new Meetup(req.body);
     meetup.save()
         .then(meetup => {
-            res.status(200).json({ 'mate': 'mate added successfully' });
+            res.status(200).json({ 'meetup': 'meetup added successfully' });
         })
         .catch(err => {
-            res.status(400).send('adding new mate failed');
+            res.status(400).send('adding new meetup failed');
         });
 });
 
@@ -102,8 +112,13 @@ meetupRoutes.get('/accept/:inviter/:invitee', function (req, res) {
     })
 })
 
-meetupRoutes.get('reject/:inviter/:invitee', function (req, res) {
-    Meetup.findOneAndDelete({ "inviter": req.params.inviter, "invitee": req.params.invitee });
+meetupRoutes.get('/reject/:inviter/:invitee', function (req, res) {
+    Meetup.findOneAndDelete({ "inviter": req.params.inviter, "invitee": req.params.invitee }, function (err, meetup) {
+        if (err)
+            console.log(err)
+        else
+            res.json('Meetup rejected');
+    });
 });
 
 app.use('/meet_mates', matesRoutes);

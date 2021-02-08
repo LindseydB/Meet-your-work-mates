@@ -11,7 +11,7 @@ let Meetup = new Schema({
         required: true
     },
     meetupTime: {
-        type: Date,
+        type: String,
         required: true
     },
     meetupPlace: {
