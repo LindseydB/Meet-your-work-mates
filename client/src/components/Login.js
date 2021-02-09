@@ -33,7 +33,7 @@ class Login extends React.Component {
 
 
         const LoginService = data => (
-            axios.post('https://meet-work-mates.ts.r.appspot.com/', data)
+            axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/', data)
                 .then(res => res.status))
 
         let hardcodedCred = {

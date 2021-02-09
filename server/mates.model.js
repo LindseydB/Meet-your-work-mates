@@ -17,7 +17,23 @@ let Mate = new Schema({
     password: {
         type:  String
     },
+
+    role: {
+        type:  String
+    },
+
+    dept: {
+        type:  String
+    },
+    
+    locat: {
+        type:  String
+    },
+
     interests: [{
+        type: String
+    }],
+    skills: [{
         type: String
     }]
 });
