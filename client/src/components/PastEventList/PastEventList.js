@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-export default class EventList extends Component{
+export default class PastEventList extends Component{
   render() {
     return(
       <div>
@@ -18,7 +18,7 @@ export default class EventList extends Component{
                   <p class="eventText"><span class="blue"><strong>Name</strong></span><br />
                   123 Somewhere<br />
                   12pm<br />
-                  <span class="blue">02/02/2021</span></p>
+                <span class="blue">  02/02/2021</span></p>
                   </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ export default class EventList extends Component{
                   <p class="eventText"><span class="blue"><strong>Name</strong></span><br />
                   123 Somewhere<br />
                   12pm<br />
-                  <span class="blue">02/02/2021</span></p>
+                <span class="blue">  02/02/2021</span></p>
                   </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ export default class EventList extends Component{
                   <p class="eventText"><span class="blue"><strong>Name</strong></span><br />
                   123 Somewhere<br />
                   12pm<br />
-                  <span class="blue">02/02/2021</span></p>
+                <span class="blue">  02/02/2021</span></p>
                   </div>
                 </div>
             </div>

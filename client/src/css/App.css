@@ -15,9 +15,17 @@ p.eventText{
   padding-left:20px;
 }
 
+.blue{
+  color:#366eea!important;
+}
+
 
 .logo{
   width:120px;
+}
+
+.headerimg img{
+  width:30px!important;
 }
 
 

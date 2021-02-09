@@ -1,0 +1,15 @@
+.event{
+
+  background:#eeeeee;
+  width:507px!important;
+  height:187px!important;
+  float:left;
+  margin:0 10px;
+  padding-top:35px;
+  border:1px solid #e0e0e0;
+
+}
+
+.catchups{
+  margin:0 10px;
+}

@@ -1,3 +1,17 @@
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+
 .catchup{
   background: #ffffff;
   width: 370px;
@@ -12,6 +26,8 @@
 .catchups{
   margin:0 10px;
 }
+
+
 
 .event{
 
@@ -43,13 +59,14 @@
 }
 
 .meetup{
-  background:#eeeeee;
+  border:1px solid #eeeeee;
   width:550px!important;
-  height:140px!important;
+  height:240px!important;
   float:left;
   margin:0 10px;
   padding-top:35px;
   border-radius:0!important;
+
 }
 
 .eventtitle, .eventinfo{
@@ -69,19 +86,23 @@
 
 .scrolling-wrapper{
   overflow-x: auto;
-  height: 187px;
+
+}
+
+.scrolling-wrapper2{
+  overflow-x: auto;
+  height: 287px;
   padding-top: 19px!important;
 }
 
 .bg-light {
     background-color: #f8f9fa!important;
-    margin-top: 65px;
+    margin-top: 45px;
     z-index:999999;
     position: fixed;
     top: 0;
     left: 0;
     height:250px;
-    padding:30px;
 
   }
 
@@ -90,6 +111,7 @@
 
     .bg-light {
         background:none!important;
+        border:0!important;
 
       }
 
