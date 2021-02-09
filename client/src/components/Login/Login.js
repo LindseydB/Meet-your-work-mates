@@ -1,12 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-
 class Login extends React.Component {
 
     constructor(props) {
         super(props);
 
-        
+
         this.state = {
             user: '',
             password: '',
@@ -49,7 +48,7 @@ class Login extends React.Component {
 
         console.log(userInput.email);
         console.log(userInput.password);
-        
+
         axios.post('http://localhost:4000/meet_mates/login',{u_email:userInput.email, u_pwd:userInput.password}).then((res)=>{
             if(res.data['login'] === 'success') {
                 //Save the token locally
@@ -62,15 +61,15 @@ class Login extends React.Component {
 
 
                 //  axios.get('http://mates.ts.r.appspot.com/meet_mates/'+username')
-                 
+
                     // .then(res => {
                     //     console.log(res)
                     // })
                     // .catch(err => {
                     //     console.log(err)
                     // })
-        
-        
+
+
    };
 
     render() {
@@ -84,15 +83,15 @@ class Login extends React.Component {
                         <input type="email"
                             name="inputEmail"
                             placeholder="user@test.co.nz"
-                            required 
-                            onChange={e => this.inputEmail= e.target.value} 
+                            required
+                            onChange={e => this.inputEmail= e.target.value}
                             />
 
                         <label for="inputPassword">Password</label>
                         <input type="password"
                             name="inputPassword"
                             placeholder="password"
-                            required 
+                            required
                             onChange={e => this.inputPassword= e.target.value} />
 
                         {/* <div>
