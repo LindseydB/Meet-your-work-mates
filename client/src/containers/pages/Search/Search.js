@@ -9,6 +9,16 @@ const Search = () => {
 
     const advancedButton = () => setAdvancedOptions(!advancedOptions);
 
+    const [selectedAdvancedOptions, setSelectedAdvancedOptions] = useState({});
+
+    const updateSelectedAdvancedOptions = (e) => {
+        let options = {...selectedAdvancedOptions}
+        const changed = e.target.name;
+        options[changed] = e.target.value;
+
+        setSelectedAdvancedOptions(options);
+    }
+
     const tempSearchArray = [
         {name: 'test1',
         role: 'dev',
@@ -26,7 +36,8 @@ const Search = () => {
         setSearchArray(tempSearchArray);
 
         // const query = {
-        //     keywords: e.target.elements.keywords.value
+        //     keywords: e.target.elements.keywords.value,
+        //     filters: selectedAdvancedOptions
         // }
 
         // axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', query)
@@ -53,7 +64,7 @@ const Search = () => {
                             className="col-9" />
                         <button type="button" name="advanced button" className="col-3" onClick={advancedButton}>Advanced</button>
                     </div>
-                    {advancedOptions === false ? null : <AdvancedSearch />} {/* need to add a margin here, not sure how */}
+                    {advancedOptions === false ? null : <AdvancedSearch update={updateSelectedAdvancedOptions}/>} {/* need to add a margin here, not sure how */}
                     <div className="form-group">
                         <input type="submit" value="Search" className="btn btn-primary" />
                     </div>
