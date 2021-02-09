@@ -1,38 +1,42 @@
-import React from 'react'
+import React from 'react';
+import AdvancedSearchComponent from './AdvancedSearchComponent/AdvancedSearchComponent';
 
-const AdvancedSearch = () => {
+const AdvancedSearch = (props) => {
+    const valuesList = [
+        {name: "Job Title",
+        option1: "Dev",
+        option2: "UX",
+        option3: "BA"},
+        {name: "Department",
+        option1: "Dev",
+        option2: "UX",
+        option3: "BA"},
+        {name: "Location",
+        option1: "Wellington",
+        option2: "Auckland",
+        option3: "Christchurch"},
+        {name: "Interests",
+        option1: "Hiking",
+        option2: "Rugby",
+        option3: "Soccer"},
+        {name: "Skills",
+        option1: "Problem Solving",
+        option2: "Graphic Design",
+        option3: "Time Management"}
+    ]
+
+    const componentList = valuesList.map(list => {
+        return (<AdvancedSearchComponent update={props.update}
+            name={list.name} 
+            option1={list.option1} 
+            option2={list.option2} 
+            option3={list.option3} />
+        );
+    });
+
     return (
         <div className="row">
-            <select className="col-2" name="jobTitles">
-                <option value="" selected>Job Titles</option>
-                <option value="dev">Developer</option>
-                <option value="ux">UX</option>
-                <option value="ba">BA</option>
-            </select>
-            <select className="col-2" name="department">
-                <option value="" selected>Department</option>
-                <option value="dev">Developer</option>
-                <option value="ux">UX</option>
-                <option value="ba">BA</option>
-            </select>
-            <select className="col-2" name="location">
-                <option value="" selected>Location</option>
-                <option value="dev">Wellington</option>
-                <option value="ux">Auckland</option>
-                <option value="ba">Christchurch</option>
-            </select>
-            <select className="col-2" name="interests">
-                <option value="" selected>Interests</option>
-                <option value="dev">Hiking</option>
-                <option value="ux">Rugby</option>
-                <option value="ba">Soccer</option>
-            </select>
-            <select className="col-2" name="skills">
-                <option value="" selected>Skills</option>
-                <option value="dev">Problem solving</option>
-                <option value="ux">Graphic design</option>
-                <option value="ba">Time management</option>
-            </select>
+            {componentList}
         </div>
     )
 }
