@@ -1,16 +1,42 @@
 import React, {useState} from 'react'
 import "../../../bootstrap/css/bootstrap.min.css";
-import AdvancedSearch from "../../../components/AdvancedSearch/AdvancedSearch.js"
+import AdvancedSearch from "../../../components/Search/AdvancedSearch/AdvancedSearch.js";
+import SearchOutput from '../../../components/Search/SearchOutput/SearchOutput';
+import axios from 'axios';
 
 const Search = () => {
     const [advancedOptions, setAdvancedOptions] = useState(false);
 
     const advancedButton = () => setAdvancedOptions(!advancedOptions);
 
+    const tempSearchArray = [
+        {name: 'test1',
+        role: 'dev',
+        location: 'Wellington'},
+        {name: 'test2',
+        role: 'ba',
+        location: 'Wellington'}
+    ];
+
+    const [searchArray, setSearchArray] = useState([]);
+
     const onSubmit = (e) => {
         e.preventDefault();
+
+        setSearchArray(tempSearchArray);
+
+        // const query = {
+        //     keywords: e.target.elements.keywords.value
+        // }
+
+        // axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', query)
+        //     .then(res => console.log(res.data));
         
         e.target.elements.keywords.value = "";
+
+        if (advancedOptions === true) {
+            advancedButton();
+        }
     }
 
     return (
@@ -32,6 +58,8 @@ const Search = () => {
                         <input type="submit" value="Search" className="btn btn-primary" />
                     </div>
                 </form>
+                <h2>Suggested teammates:</h2>
+                <SearchOutput array={searchArray}/>
             </div>
         </React.Fragment>
     )
