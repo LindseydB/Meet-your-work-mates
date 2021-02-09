@@ -19,15 +19,18 @@ let Mate = new Schema({
     },
 
     role: {
-        type:  String
+        type:  String,
+        default: ''
     },
 
     dept: {
-        type:  String
+        type:  String,
+        default: ''
     },
     
     locat: {
-        type:  String
+        type:  String,
+        default: ''
     },
 
     interests: [{

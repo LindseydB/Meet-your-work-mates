@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const matesRoutes = express.Router();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000; //process.env.PORT || 
 let atlasString = require('./atlas.json');
 
 let Mates = require('./mates.model');
@@ -46,7 +46,6 @@ matesRoutes.post('/update/:id',function(req, res) {
             mate.name = req.body.name;
             mate.mobile = req.body.mobile;
             mate.password = req.body.password;
-
             mate.save().then(mate => {
                 res.json('Mate updated!');
             })
@@ -58,6 +57,7 @@ matesRoutes.post('/update/:id',function(req, res) {
 
 matesRoutes.post('/add', function(req, res) {
     let mate = new Mates(req.body);
+
     mate.save()
         .then(mate => {
             res.status(200).json({'mate': 'mate added successfully'});
