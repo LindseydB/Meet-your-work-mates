@@ -8,7 +8,6 @@ class Login extends React.Component {
         this.state = {
             user: '',
             password: '',
-            // isChecked: false
         };
 
         this.onSubmitForm = this.onSubmitForm.bind(this);
@@ -28,8 +27,8 @@ class Login extends React.Component {
         let password = e.target.elements.inputPassword.value;
 
         let hardcodedCred = {
-            email: 'test.user@test.co.nz',
-            password: 'password123'
+            email: '',
+            password: ''
         }
 
         if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
