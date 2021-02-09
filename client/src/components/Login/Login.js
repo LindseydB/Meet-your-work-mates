@@ -1,17 +1,34 @@
 import React from 'react';
+import axios from 'axios';
 
 class Login extends React.Component {
 
     constructor(props) {
         super(props);
 
+        
         this.state = {
             user: '',
             password: '',
         };
 
-        this.onSubmitForm = this.onSubmitForm.bind(this);
+        // this.onSubmitForm = this.onSubmitForm.bind(this);
     }
+
+    onChangeInputEmail = event => {
+
+            this.setState({
+            inputEmail: event.target.value
+        });
+    }
+
+    onChangeInputPassword = event => {
+
+        this.setState({
+            inputPassword: event.target.value
+        });
+    }
+
 
     onChangeCheckbox = event => {
 
@@ -21,26 +38,35 @@ class Login extends React.Component {
         });
     }
 
-    onSubmitForm = (e) => {
-        e.preventDefault();
-        let username = e.target.elements.inputEmail.value;
-        let password = e.target.elements.inputPassword.value;
+    onSubmit = (e) => {
 
-        let hardcodedCred = {
-            email: '',
-            password: ''
+        e.preventDefault();
+            email: this.inputEmail,
         }
 
-        if ((username === hardcodedCred.email) && (password === hardcodedCred.password)) {
-            const token = '211333714swen';
-            sessionStorage.setItem('auth-token', token);
-            this.props.parent_history.push('/dashboard');
+        console.log(userInput.email);
+        axios.post('http://localhost:4000/meet_mates/login',{u_email:userInput.email, u_pwd:userInput.password}).then((res)=>{
+            if(res.data['login'] === 'success') {
+                //Save the token locally
+                this.props.parent_history.push('/dashboard');
+            } else {
+                console.log('User name or passowrd is not correct.');
+                //Handle login failuire
+            }
+        });
 
-        } else if ((username === hardcodedCred.email) && (password !== hardcodedCred.password)) {
-            alert('incorrect password');
 
-        } else alert('username not found');
-    }
+                //  axios.get('http://mates.ts.r.appspot.com/meet_mates/'+username')
+                 
+                    // .then(res => {
+                    //     console.log(res)
+                    // })
+                    // .catch(err => {
+                    //     console.log(err)
+                    // })
+        
+        
+   };
 
     render() {
 
@@ -48,25 +74,28 @@ class Login extends React.Component {
             <div>
 
                 <div>
-                    <form onSubmit={this.onSubmitForm}>
+                    <form onSubmit={this.onSubmit}>
                         <label for="inputEmail"> Email</label>
                         <input type="email"
                             name="inputEmail"
                             placeholder="user@test.co.nz"
-                            required onChange={this.onChange} />
+                            required 
+                            onChange={e => this.inputEmail= e.target.value} 
+                            />
 
                         <label for="inputPassword">Password</label>
                         <input type="password"
                             name="inputPassword"
                             placeholder="password"
-                            required onChange={this.onChange} />
+                            required 
+                            onChange={e => this.inputPassword= e.target.value} />
 
-                        <div>
+                        {/* <div>
                             <label for="remember">Remember me</label>
                             <input type="checkbox" //checked={isChecked}
                                 name="rememberMe" onChange={this.onChangeCheckbox} />
                             <a href={"https://google.com"}>Forgot password?</a>
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
                             <input type="submit" value="Login" className="btn btn-primary" />
