@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import "../../../bootstrap/css/bootstrap.min.css";
 import AdvancedSearch from "../../../components/Search/AdvancedSearch/AdvancedSearch.js";
 import SearchOutput from '../../../components/Search/SearchOutput/SearchOutput';
+import axios from 'axios';
 
 const Search = () => {
     const [advancedOptions, setAdvancedOptions] = useState(false);
@@ -23,6 +24,13 @@ const Search = () => {
         e.preventDefault();
 
         setSearchArray(tempSearchArray);
+
+        // const query = {
+        //     keywords: e.target.elements.keywords.value
+        // }
+
+        // axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', query)
+        //     .then(res => console.log(res.data));
         
         e.target.elements.keywords.value = "";
 
@@ -30,7 +38,6 @@ const Search = () => {
             advancedButton();
         }
     }
-
 
     return (
         <React.Fragment>
