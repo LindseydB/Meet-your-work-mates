@@ -7,6 +7,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Search from "./pages/Search/Search.js";
 import Profile from "./pages/Profile/Profile.js";
 
+
 const Shell = ({location}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -14,8 +15,8 @@ const Shell = ({location}) => {
 
     return (
         <React.Fragment>
-            <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#">Meet Your Workmates</a>
+            <header className="navbar navbar-dark sticky-top bg-darkr flex-md-nowrap p-0 shadow">
+                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#"><img src="../img/hono_logo.png" alt="Hono Logo" /></a>
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
@@ -23,8 +24,8 @@ const Shell = ({location}) => {
                     </li>
                 </ul>
                 <div className="navbar-expand-sm">
-                    <div className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" 
-                    data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded={!isNavCollapsed ? 
+                    <div className="custom-toggler navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded={!isNavCollapsed ?
                     true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                         <span className="navbar-toggler-icon"></span>
                     </div>
@@ -34,13 +35,11 @@ const Shell = ({location}) => {
 
             <div className="container-fluid">
                 <div className="row">
-                    {location.pathname === '/' ? null : <Navigation isNavCollapsed={isNavCollapsed}/>}
-                    <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                        <div className="d-flex">
+                    {location.pathname === '/' ? <main className="col-md-12 px-md-4"><Route path='/' exact component={LoginRegister} /></main>
+ : <Navigation isNavCollapsed={isNavCollapsed}/>}
+                    <main className="col-md-9 col-lg-10 px-md-4">
 
-                        </div>
 
-                        <Route path='/' exact component={LoginRegister} />
                         <Route path='/dashboard' exact component={Home} />
                         <Route path='/search' exact component={Search} />
                         <Route path='/profile' exact component={Profile} />
@@ -53,4 +52,3 @@ const Shell = ({location}) => {
 }
 
 export default withRouter(Shell);
-

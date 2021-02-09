@@ -1,22 +1,13 @@
 .event{
 
-  background:#ffffff;
-  width:120px;
-  height:210px;
+  background:#eeeeee;
+  width:420px;
+  height:180px;
   float:left;
   margin:0 10px;
-  padding-top:10px;
-  -webkit-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-  -moz-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-  box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
+  padding-top:35px;
+  border:3px solid #ffffff;
 
-
-}
-
-.eventText{
-  font-size:13px;
-  text-align: center;
-  margin-top:7px;
 }
 
 .meetups{
@@ -34,21 +25,20 @@
 
 
 .profileimg{
-  height:90px;
-  width:90px;
-  background:#eeeeee;
+  height:110px;
+  width:110px;
+  background:#ffffff;
   border-radius:120px;
   margin:0 15px;
 }
 
 .meetup{
 
-  background:#ffffff;
+  background:#eeeeee;
   width:420px;
   height:240px;
   float:left;
   margin:1%;
-  border:1px solid #eeeeee;
 
 }
 
@@ -67,11 +57,11 @@
   background:#e0dfdf;
 }
 
+
 .scrolling-wrapper{
-  overflow-x: auto;
-  height: 287px;
-  padding-top: 19px!important;
+	overflow-x: auto;
 }
+
 
 .bg-light {
     background-color: #f8f9fa!important;
@@ -80,9 +70,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    height:250px;
-    padding:30px;
-
   }
 
 
