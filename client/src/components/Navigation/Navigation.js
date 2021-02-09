@@ -24,6 +24,9 @@ const Navigation = ({ isNavCollapsed }) => {
                             <li className="nav-item">
                                 <Link to="/profile" className="nav-link">Profile</Link>
                             </li>
+                            <li>
+                            <a className="nav-link" href="/">Sign out</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

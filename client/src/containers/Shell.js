@@ -4,9 +4,13 @@ import Home from "./pages/Home/Home.js"
 import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
-import Logo from "../img/hono_logo.png"
 import Search from "./pages/Search/Search.js";
 import Profile from "./pages/Profile/Profile.js";
+import Logo from "../img/hono_logo.png";
+import ProfileImg from "../img/notifications.png";
+import NotificationImg from "../img/profile.jpg";
+
+
 
 
 const Shell = ({location}) => {
@@ -21,7 +25,8 @@ const Shell = ({location}) => {
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
-                        <a className="nav-link" href="/">Sign out</a>
+                      <a className="headerimg" href="/profile"><img src={ProfileImg} alt="profile icon" class="headericon" /></a>
+                      <a className="headerimg" href="/notifications"><img src={NotificationImg} alt="notifications icon" class="headericon" /></a>
                     </li>
                 </ul>
                 <div className="navbar-expand-sm">
