@@ -7,15 +7,14 @@ export default class EventList extends Component{
 
       <div className="container-fluid">
           <div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
-
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />
@@ -26,14 +25,14 @@ export default class EventList extends Component{
           </div>
 
 
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />
@@ -44,15 +43,14 @@ export default class EventList extends Component{
           </div>
 
 
-
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />
@@ -62,14 +60,14 @@ export default class EventList extends Component{
             </div>
           </div>
 
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />
@@ -79,14 +77,14 @@ export default class EventList extends Component{
             </div>
           </div>
 
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />
@@ -97,14 +95,14 @@ export default class EventList extends Component{
           </div>
 
 
-          <div className="events">
-            <div className="event">
+          <div className="catchups">
+            <div className="catchup">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
                   <div className="profileimg">
                   </div>
                 </div>
-               <div className="col-12">
+               <div className="col-9">
                   <p class="eventText"><strong>Name</strong><br />
                   123 Somewhere<br />
                   12pm<br />

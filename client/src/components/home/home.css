@@ -1,20 +1,22 @@
 .event{
 
   background:#eeeeee;
-  width:110px;
-  height:180px;
+  width:507px!important;
+  height:187px!important;
   float:left;
   margin:0 10px;
   padding-top:35px;
-  border:3px solid #ffffff;
-  -webkit-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-  -moz-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-   box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
+  border:1px solid #e0e0e0;
 
 }
 
-.meetups{
+.meetup{
+  background:#eeeeee;
+  width:600px!important;
+  height:360px!important;
+  float:left;
   margin:0 10px;
+  padding-top:35px;
 }
 
 ::-webkit-scrollbar {
@@ -35,14 +37,12 @@
   margin:0 15px;
 }
 
-.meetup{
+.events{
 
   background:#eeeeee;
-  width:420px;
-  height:240px;
+  width:503px;
+  height:187px;
   float:left;
-  margin:1%;
-
 }
 
 .eventtitle, .eventinfo{

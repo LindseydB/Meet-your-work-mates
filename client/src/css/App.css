@@ -2,6 +2,19 @@
   font-family:helvetica;
 }
 
+.meetup{
+  height: 120px!important;
+  width: 390px!important;
+  padding-top: 13px;
+  border-radius:7px;
+
+}
+
+p.eventText{
+  text-align: left!important;
+  padding-left:20px;
+}
+
 
 .logo{
   width:120px;
@@ -71,6 +84,8 @@ ul.navbar-nav{
 
 .bg-light{
   height:100vh!important;
+  background:#f9f9f9!important;
+  border-right:1px solid #e0e0e0;
 }
 
 .heading{

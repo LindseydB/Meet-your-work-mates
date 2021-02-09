@@ -1,26 +1,27 @@
+.catchup{
+  background: #ffffff;
+  width: 370px;
+  height: 120px;
+  border-radius:7px;
+  float: left;
+  margin: 1%;
+  border: 1px solid #eeeeee;
+  padding-top:12px;
+}
+
+.catchups{
+  margin:0 10px;
+}
+
 .event{
 
-  background:#ffffff;
-  width:120px;
-  height:210px;
+  background:#eeeeee;
+  width:507px!important;
+  height:187px!important;
   float:left;
   margin:0 10px;
-  padding-top:10px;
-  -webkit-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-  -moz-box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-  box-shadow: 10px 10px 66px -28px rgba(0,0,0,0.32);
-
-
-}
-
-.eventText{
-  font-size:13px;
-  text-align: center;
-  margin-top:7px;
-}
-
-.meetups{
-  margin:0 10px;
+  padding-top:35px;
+  border:1px solid #e0e0e0;
 }
 
 ::-webkit-scrollbar {
@@ -42,14 +43,13 @@
 }
 
 .meetup{
-
-  background:#ffffff;
-  width:420px;
-  height:240px;
+  background:#eeeeee;
+  width:550px!important;
+  height:140px!important;
   float:left;
-  margin:1%;
-  border:1px solid #eeeeee;
-
+  margin:0 10px;
+  padding-top:35px;
+  border-radius:0!important;
 }
 
 .eventtitle, .eventinfo{
@@ -69,7 +69,7 @@
 
 .scrolling-wrapper{
   overflow-x: auto;
-  height: 287px;
+  height: 187px;
   padding-top: 19px!important;
 }
 
