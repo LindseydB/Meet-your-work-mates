@@ -9,29 +9,34 @@ const Search = () => {
 
     const advancedButton = () => setAdvancedOptions(!advancedOptions);
 
-    const tempSearchArray = [
-        {name: 'test1',
-        role: 'dev',
-        location: 'Wellington'},
-        {name: 'test2',
-        role: 'ba',
-        location: 'Wellington'}
-    ];
+
 
     const [searchArray, setSearchArray] = useState([]);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        setSearchArray(tempSearchArray);
+        //define variable to hold the keywords typed by the user
+        const keywords = e.target.elements.keywords.value;
 
-        // const query = {
-        //     keywords: e.target.elements.keywords.value
-        // }
+        //URL for live environment: https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/search
+        //simple request to search based on the content of the text box. Can replace the localhost reference with the URL above once server is deployed
+        fetch("http://localhost:4000/meet_mates/search/"+keywords)
+          .then(res => res.json())
+          .then(
+            (result) => {
+              //set the search array within the state to contain the JSON result for displaying in the other components
+              setSearchArray(result);
+            },
+            // NOTE: it's important to handle errors here
+            // instead of a catch() block so that we don't accidentally catch
+            // exceptions from bugs within the component
+            (error) => {
+              //log any errorts to the console
+              console.log(error);
+            }
+          )
 
-        // axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/add', query)
-        //     .then(res => console.log(res.data));
-        
         e.target.elements.keywords.value = "";
 
         if (advancedOptions === true) {
