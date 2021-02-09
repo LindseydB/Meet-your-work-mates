@@ -4,8 +4,9 @@ import Home from "./pages/Home/Home.js"
 import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
-import Search from "./pages/Search/Search.js"
 import Logo from "../img/hono_logo.png"
+import Search from "./pages/Search/Search.js";
+import Profile from "./pages/Profile/Profile.js";
 
 
 const Shell = ({location}) => {
@@ -42,6 +43,7 @@ const Shell = ({location}) => {
 
                         <Route path='/dashboard' exact component={Home} />
                         <Route path='/search' exact component={Search} />
+                        <Route path='/profile' exact component={Profile} />
 
                     </main>
                 </div>

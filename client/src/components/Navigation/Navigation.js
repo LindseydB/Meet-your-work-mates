@@ -22,7 +22,7 @@ const Navigation = ({ isNavCollapsed }) => {
                                 <Link to="/create" className="nav-link">Notifications</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/create" className="nav-link">Profile</Link>
+                                <Link to="/profile" className="nav-link">Profile</Link>
                             </li>
                         </ul>
                     </div>
