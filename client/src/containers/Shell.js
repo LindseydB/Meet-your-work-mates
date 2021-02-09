@@ -5,6 +5,7 @@ import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
 import Search from "./pages/Search/Search.js"
+import Logo from "../img/hono_logo.png"
 
 
 const Shell = ({location}) => {
@@ -15,7 +16,7 @@ const Shell = ({location}) => {
     return (
         <React.Fragment>
             <header className="navbar navbar-dark sticky-top bg-darkr flex-md-nowrap p-0 shadow">
-                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#"><img src="../img/hono_logo.png" alt="Hono Logo" /></a>
+                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/#"><img src={Logo} alt="Hono Logo" class="logo" /></a>
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">

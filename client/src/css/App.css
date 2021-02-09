@@ -2,6 +2,24 @@
   font-family:helvetica;
 }
 
+
+.logo{
+  width:120px;
+}
+
+
+h1.usernameGreeting{
+  font-weight:bold;
+  font-size:34px;
+  margin-top:5%;
+}
+
+.midTitle{
+  font-size:20px;
+  font-weight:800;
+  line-height:12px;
+}
+
 .sml{
   text-transform:uppercase;
   font-size:12px;
@@ -29,10 +47,16 @@
   float:left;
 }
 
+.navbar-expand-lg .navbar-collapse{
+  display:auto!important;
+}
+
 .custom-toggler,button{
   border:unset !important;
   border:none;
 }
+
+.navbar-expand-lg .navbar-collapse{display:flex}
 
 ul.navbar-nav{
   width:50px!important;
@@ -43,6 +67,10 @@ ul.navbar-nav{
 
 .bg-darkr{
   background-color:#000000!important;
+}
+
+.bg-light{
+  height:100vh!important;
 }
 
 .heading{

@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-12"><br />
-          <h1 className="h2">Hi Username, </h1>
-          <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</strong></p><br /><br />
-          <h1 className="h2">Catch-ups</h1>
+        <div className="col-12">
+          <h1 className="usernameGreeting"><strong>Hello Username,</strong> </h1><br />
+          <p>Here you can check out your up coming meet-ups and events.</p><br /><br />
+          <h1 className="midTitle">Catch-ups</h1>
           <div className="sidescroll">
             <EventList />
           </div>
@@ -19,7 +19,7 @@ const Home = () => {
 
       <div className="row">
         <div className="col-12"><br />
-          <h1 className="h2">Upcoming events</h1>
+          <h1 className="midTitle">Upcoming events</h1>
           <div className="sidescroll">
             <MeetupList />
           </div>
