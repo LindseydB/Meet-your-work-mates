@@ -74,10 +74,10 @@ matesRoutes.post('/add', function(req, res) {
 
     mate.save()
         .then(mate => {
-            res.status(200).json({'meetup': 'meetup added successfully'});
+            res.status(200).json({'mate': 'mate added successfully'});
         })
         .catch(err => {
-            res.status(400).send('adding new meetup failed');
+            res.status(400).send('adding new mate failed');
         });
 });
 

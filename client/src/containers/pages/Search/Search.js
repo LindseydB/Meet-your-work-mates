@@ -10,10 +10,12 @@ const Search = () => {
     const advancedButton = () => setAdvancedOptions(!advancedOptions);
 
     const tempSearchArray = [
-        {name: 'test1',
+        {email: 'lowewalt@gmail.com',  
+        name: 'test1',
         role: 'dev',
         location: 'Wellington'},
-        {name: 'test2',
+        {email: 'ddjmhatre@gmail.com', 
+        name: 'test2',
         role: 'ba',
         location: 'Wellington'}
     ];
