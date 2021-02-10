@@ -7,8 +7,8 @@ import Navigation from "../components/Navigation/Navigation";
 import Search from "./pages/Search/Search.js";
 import Profile from "./pages/Profile/Profile.js";
 import Logo from "../img/hono_logo.png";
-import ProfileImg from "../img/notifications.png";
-import NotificationImg from "../img/profile.jpg";
+import ProfileImg from "../img/profile.jpg";
+import NotificationImg from "../img/notifications.png";
 
 
 
@@ -25,8 +25,8 @@ const Shell = ({location}) => {
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
-                      <a className="headerimg" href="/profile"><img src={ProfileImg} alt="profile icon" class="headericon" /></a>
-                      <a className="headerimg" href="/notifications"><img src={NotificationImg} alt="notifications icon" class="headericon" /></a>
+                        <a className="headerimg" href="/notifications"><img src={NotificationImg} alt="notifications icon" class="headericon" /></a>
+                        <a className="headerimg" href="/profile"><img src={ProfileImg} alt="profile icon" class="headericon" /></a>
                     </li>
                 </ul>
                 <div className="navbar-expand-sm">
@@ -42,7 +42,7 @@ const Shell = ({location}) => {
             <div className="container-fluid">
                 <div className="row">
                     {location.pathname === '/' ? <main className="col-md-12 px-md-4"><Route path='/' exact component={LoginRegister} /></main>
- : <Navigation isNavCollapsed={isNavCollapsed}/>}
+                : <Navigation isNavCollapsed={isNavCollapsed}/>}
                     <main className="col-md-9 col-lg-10 px-md-4">
 
 

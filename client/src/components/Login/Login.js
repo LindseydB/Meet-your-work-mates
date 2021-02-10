@@ -49,10 +49,10 @@ class Login extends React.Component {
         console.log(userInput.email);
         console.log(userInput.password);
 
-        axios.post('http://localhost:4000/meet_mates/login',{u_email:userInput.email, u_pwd:userInput.password}).then((res)=>{
+        axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/login',{u_email:userInput.email, u_pwd:userInput.password}).then((res)=>{
             if(res.data['login'] === 'success') {
                 //Save the token locally
-                axios.get('http://localhost:4000/meet_mates/' + userInput.email)
+                axios.get('https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/' + userInput.email)
                     .then(res => {
                         localStorage.setItem('currentUser', JSON.stringify(res.data));
                         console.log(localStorage.getItem('currentUser'));

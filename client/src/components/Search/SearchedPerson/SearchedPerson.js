@@ -18,7 +18,7 @@ const SearchedPerson = (props) => {
             <p>{props.role}</p>
             <p>{props.location}</p>
             <button onClick={()=>
-                axios.post('http://localhost:4000/meetup_invites/add', newMeetup)
+                axios.post('https://api-dot-meet-work-mates.ts.r.appspot.com/meetup_invites/add', newMeetup)
                     .then(res => console.log(res.data))
             }>Send Invite</button>
         </div>

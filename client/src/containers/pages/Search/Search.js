@@ -41,7 +41,7 @@ const Search = () => {
 
         //URL for live environment: https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/search
         //simple request to search based on the content of the text box. Can replace the localhost reference with the URL above once server is deployed
-        fetch("http://localhost:4000/meet_mates/search/"+keywords)
+        fetch("https://api-dot-meet-work-mates.ts.r.appspot.com/meet_mates/search/"+keywords)
           .then(res => res.json())
           .then(
             (result) => {
