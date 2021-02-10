@@ -18,8 +18,8 @@ class Login extends React.Component {
     onChangeInputEmail = event => {
 
             this.setState({
-            inputEmail: event.target.value
-        });
+                inputEmail: event.target.value
+            });
     }
 
     onChangeInputPassword = event => {
@@ -52,6 +52,12 @@ class Login extends React.Component {
         axios.post('http://localhost:4000/meet_mates/login',{u_email:userInput.email, u_pwd:userInput.password}).then((res)=>{
             if(res.data['login'] === 'success') {
                 //Save the token locally
+                axios.get('http://localhost:4000/meet_mates/' + userInput.email)
+                    .then(res => {
+                        localStorage.setItem('currentUser', JSON.stringify(res.data));
+                        console.log(localStorage.getItem('currentUser'));
+                    }) 
+                localStorage.setItem('currentUserEmail', userInput.email);
                 this.props.parent_history.push('/dashboard');
             } else {
                 console.log('User name or passowrd is not correct.');
