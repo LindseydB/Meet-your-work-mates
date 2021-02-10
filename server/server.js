@@ -100,6 +100,49 @@ meetupRoutes.get('/', function (req, res) {
     })
 })
 
+meetupRoutes.get('/pending/:email', function (req, res) {
+    let email = req.params.email;
+    //essentially a database join happening in the code below this. Hang in there.
+    Meetup.aggregate([
+      //match invites based on the below criteria
+      { $match: {
+        //use the invitee email address for the initial match (we want the current users invites)
+          invitee:email,
+          //only unconfirmed invites will be treated as pending (as they should be)
+          confirmed: false
+        }
+      },
+      //lookup the 'mates' table and join them based on the inviters email address (we want the details of the inviter)
+      {
+        $lookup:
+        {
+            from: "mates",
+            localField: "inviter",
+            foreignField: "email",
+            //give it a nice name that we can easily access from the JSON within React
+            as: "inviterDetails"
+        },
+      },
+      {
+        //we want to include all fields except the password - this would be BAD!
+        $project:
+        {
+          //exclude the INVITERS password from the request. Passwords are currently stored in Plaintext, which is super bad
+          //0 = false (exclude) 1 = true (include). The below will display all fields except the password
+          "inviterDetails.password":0,
+        }
+      }
+
+  ], function (err, mates){
+    res.json(mates);
+  });
+
+
+
+
+
+})
+
 meetupRoutes.post('/add', function (req, res) {
     let meetup = new Meetup(req.body);
     meetup.save()

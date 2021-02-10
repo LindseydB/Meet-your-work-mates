@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Route, withRouter } from "react-router-dom";
-import Home from "./pages/Home/Home.js"
+import Home from "./pages/Home/Home.js";
 import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 import "../bootstrap/css/bootstrap.min.css";
 import Navigation from "../components/Navigation/Navigation";
@@ -9,8 +9,8 @@ import Profile from "./pages/Profile/Profile.js";
 import Logo from "../img/hono_logo.png";
 import ProfileImg from "../img/profile.jpg";
 import NotificationImg from "../img/notifications.png";
-
-
+import 'semantic-ui-css/semantic.min.css'
+import PendingInvites from "./pages/PendingInvites/PendingInvites.js";
 
 
 const Shell = ({location}) => {
@@ -49,6 +49,7 @@ const Shell = ({location}) => {
                         <Route path='/dashboard' exact component={Home} />
                         <Route path='/search' exact component={Search} />
                         <Route path='/profile' exact component={Profile} />
+                        <Route path='/invites' exact component={PendingInvites} />
 
                     </main>
                 </div>

@@ -10,22 +10,17 @@ const Navigation = ({ isNavCollapsed }) => {
                     <div className="position-sticky pt-3">
                         <ul className="nav flex-column">
                             <li className="nav-item">
-                                <Link to="/dashboard" className="nav-link">Home</Link>
+                                <Link to="/dashboard" className="nav-link">Dashboard</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/search" className="nav-link">Search</Link>
+                                <Link to="/search" className="nav-link">Explore</Link>
                             </li>
+
                             <li className="nav-item">
-                                <Link to="/create" className="nav-link">Calendar</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/create" className="nav-link">Notifications</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/profile" className="nav-link">Profile</Link>
-                            </li>
+                               <Link to="/invites" className="nav-link">Pending Invites</Link>
+                           </li>
                             <li>
-                            <a className="nav-link" href="/">Sign out</a>
+                            <a className="nav-link" href="/">Log Out</a>
                             </li>
                         </ul>
                     </div>

@@ -18,14 +18,13 @@ export default class MeetupList extends Component{
                         </div>
                       </div>
                       <div className="row">
-                        <div className="col-12">
+                        <div className="col-8">
                           <div className="eventtitle">
-                            <p span class="sml">6pm - 2am</p>
-                            <p span class="eventName">Event Name</p>
-                            <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                          <p span class="eventName">Event Name</p>
+                          <p span class="sml">10 February 2021 | 6pm - 2am</p>
                             </div>
                         </div>
-                        <div className="col-12">
+                        <div className="col-4">
                             <div className="eventinfo">
                                 <div class="smlCircle"></div>
                                 <div class="smlCircle"></div>
@@ -45,14 +44,13 @@ export default class MeetupList extends Component{
                        </div>
                      </div>
                      <div className="row">
-                       <div className="col-12">
+                       <div className="col-8">
                          <div className="eventtitle">
-                           <p span class="sml">6pm - 2am</p>
-                           <p span class="eventName">Event Name</p>
-                           <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                         <p span class="eventName">Event Name</p>
+                         <p span class="sml">10 February 2021 | 6pm - 2am</p>
                            </div>
                        </div>
-                       <div className="col-12">
+                       <div className="col-4">
                            <div className="eventinfo">
                                <div class="smlCircle"></div>
                                <div class="smlCircle"></div>
@@ -72,14 +70,13 @@ export default class MeetupList extends Component{
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-12">
+                      <div className="col-8">
                         <div className="eventtitle">
-                          <p span class="sml">6pm - 2am</p>
-                          <p span class="eventName">Event Name</p>
-                          <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p span class="eventName">Event Name</p>
+                        <p span class="sml">10 February 2021 | 6pm - 2am</p>
                           </div>
                       </div>
-                      <div className="col-12">
+                      <div className="col-4">
                           <div className="eventinfo">
                               <div class="smlCircle"></div>
                               <div class="smlCircle"></div>
@@ -99,14 +96,13 @@ export default class MeetupList extends Component{
                      </div>
                    </div>
                    <div className="row">
-                     <div className="col-12">
+                     <div className="col-8">
                        <div className="eventtitle">
-                         <p span class="sml">6pm - 2am</p>
-                         <p span class="eventName">Event Name</p>
-                         <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                       <p span class="eventName">Event Name</p>
+                       <p span class="sml">10 February 2021 | 6pm - 2am</p>
                          </div>
                      </div>
-                     <div className="col-12">
+                     <div className="col-4">
                          <div className="eventinfo">
                              <div class="smlCircle"></div>
                              <div class="smlCircle"></div>
@@ -126,14 +122,13 @@ export default class MeetupList extends Component{
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-12">
+                    <div className="col-8">
                       <div className="eventtitle">
-                        <p span class="sml">6pm - 2am</p>
-                        <p span class="eventName">Event Name</p>
-                        <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      <p span class="eventName">Event Name</p>
+                      <p span class="sml">10 February 2021 | 6pm - 2am</p>
                         </div>
                     </div>
-                    <div className="col-12">
+                    <div className="col-4">
                         <div className="eventinfo">
                             <div class="smlCircle"></div>
                             <div class="smlCircle"></div>
@@ -153,14 +148,13 @@ export default class MeetupList extends Component{
                    </div>
                  </div>
                  <div className="row">
-                   <div className="col-12">
+                   <div className="col-8">
                      <div className="eventtitle">
-                       <p span class="sml">6pm - 2am</p>
-                       <p span class="eventName">Event Name</p>
-                       <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     <p span class="eventName">Event Name</p>
+                     <p span class="sml">10 February 2021 | 6pm - 2am</p>
                        </div>
                    </div>
-                   <div className="col-12">
+                   <div className="col-4">
                        <div className="eventinfo">
                            <div class="smlCircle"></div>
                            <div class="smlCircle"></div>
@@ -171,37 +165,6 @@ export default class MeetupList extends Component{
                  </div>
                </div>
              </div>
-
-             <div className="meetups">
-              <div className="meetup">
-                <div className="row">
-                  <div className="col-12">
-
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="eventtitle">
-                      <p span class="sml">6pm - 2am</p>
-                      <p span class="eventName">Event Name</p>
-                      <p span class="eventDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      </div>
-                  </div>
-                  <div className="col-12">
-                      <div className="eventinfo">
-                          <div class="smlCircle"></div>
-                          <div class="smlCircle"></div>
-                          <div class="smlCircle"></div>
-                          <div class="counter">7+</div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
 
 
 

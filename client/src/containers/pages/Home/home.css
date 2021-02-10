@@ -11,6 +11,26 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
+.modal {
+    height: auto;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+}
+
+.col-12{overflow:hidden!important;}
+
+.rightcontent{width:75%; float:left; display:inline;}
+
+.leftcontent{width:20%; float:left; display:inline;}
+
+
+.cardTile{
+  border:1px solid #eeeeee;
+  width:370px;
+  padding:10px 5px 5px 5px;
+}
 
 .catchup{
   background: #ffffff;
@@ -55,7 +75,11 @@ body::-webkit-scrollbar-thumb {
   width:90px;
   background:#eeeeee;
   border-radius:120px;
-  margin:0 15px;
+}
+
+p.eventText{
+  font-size:.8em!important;
+  margin-left:12px;
 }
 
 .meetup{
@@ -64,18 +88,26 @@ body::-webkit-scrollbar-thumb {
   height:240px!important;
   float:left;
   margin:0 10px;
-  padding-top:35px;
+  padding-top:195px;
   border-radius:0!important;
+  background:#9999;
+  color:#ffffff!important;
+  background:url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
 
 }
 
+
+
+
 .eventtitle, .eventinfo{
-  margin:15px;
+  margin:0 15px;
 }
 
 .eventtitle{
   font-size:17px;
   font-weight:bold;
+  line-height:7px;
+  color:#ffffff!important;
 }
 
 .eventimage{
@@ -86,6 +118,7 @@ body::-webkit-scrollbar-thumb {
 
 .scrolling-wrapper{
   overflow-x: auto;
+  margin-bottom:2%;
 
 }
 
@@ -93,6 +126,7 @@ body::-webkit-scrollbar-thumb {
   overflow-x: auto;
   height: 287px;
   padding-top: 19px!important;
+
 }
 
 .bg-light {
