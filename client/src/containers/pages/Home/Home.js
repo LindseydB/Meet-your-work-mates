@@ -1,6 +1,8 @@
 import React from 'react';
 import EventList from "../../../components/EventList/EventList.js"
 import MeetupList from "../../../components/MeetupsList/MeetupsList.js"
+import PastEventList from "../../../components/PastEventList/PastEventList.js"
+
 import "./home.css";
 
 
@@ -15,8 +17,19 @@ const Home = () => {
           <div className="sidescroll">
             <EventList />
           </div>
+
+          <p>&nbsp;</p>
+          
+          <h1 className="midTitle">Past Catch-ups</h1>
+          <div className="sidescroll">
+            <PastEventList />
+          </div>
+
+
         </div>
       </div>
+
+
 
       <div className="row">
         <div className="col-12"><br />

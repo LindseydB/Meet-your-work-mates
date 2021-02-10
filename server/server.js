@@ -21,7 +21,7 @@ const connection = mongoose.connection;
 connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
-
+//get list of all users from the database and return them in a JSON formatted object
 matesRoutes.get('/', function(req, res) {
     Mates.find(function(err, mates) {
         if (err) {
@@ -32,6 +32,7 @@ matesRoutes.get('/', function(req, res) {
     });
 });
 
+//get a specific user by their ID and return it as a JSON formatted object
 matesRoutes.get('/:id', function(req, res) {
     let id = req.params.id;
     Mates.findById(id, function(err, mate) {
@@ -69,6 +70,7 @@ matesRoutes.post('/update/:id',function(req, res) {
     });
 });
 
+//post request to add a new user to the database
 matesRoutes.post('/add', function(req, res) {
     let mate = new Mates(req.body);
 
