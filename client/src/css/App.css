@@ -1,13 +1,107 @@
+*{
+  font-family:helvetica;
+}
+
+.meetup{
+  height: 120px!important;
+  width: 390px!important;
+  padding-top: 13px;
+  border-radius:7px;
+
+}
+
+p.eventText{
+  text-align: left!important;
+  padding-left:20px;
+}
+
+.blue{
+  color:#366eea!important;
+}
+
+
+.logo{
+  width:120px;
+}
+
+.headerimg img{
+  width:30px!important;
+}
+
+
+h1.usernameGreeting{
+  font-weight:bold;
+  font-size:34px;
+  margin-top:5%;
+}
+
+.midTitle{
+  font-size:20px;
+  font-weight:800;
+  line-height:12px;
+}
+
+.sml{
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:200;
+  margin-top:30px;
+}
+
+.counter{
+  font-size:12px;
+  font-weight:300;
+  padding-top:5px;
+  padding-left:5px;
+}
+
+.eventDescription{
+  font-size:12px;
+  font-weight:200;
+}
+
+.smlCircle{
+  background:#eeeeee;
+  height:30px;
+  width:30px;
+  border-radius:50px;
+  float:left;
+}
+
+.navbar-expand-lg .navbar-collapse{
+  display:auto!important;
+}
+
 .custom-toggler,button{
   border:unset !important;
   border:none;
 }
+
+.navbar-expand-lg .navbar-collapse{display:flex}
+
+ul.navbar-nav{
+  width:50px!important;
+  right:0!important;
+  position:absolute!important;
+  margin-right:40px!important;
+}
+
+.bg-darkr{
+  background-color:#000000!important;
+}
+
+.bg-light{
+  height:100vh!important;
+  background:#f9f9f9!important;
+  border-right:1px solid #e0e0e0;
+}
+
 .heading{
   margin: 5% 0 7% 0;
 }
 
 .loginregister{
-  padding:3% 12%!important;
+  padding:3% 12% 12% 12%!important;
 }
 
 .registerbg{

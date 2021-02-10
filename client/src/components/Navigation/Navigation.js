@@ -6,7 +6,7 @@ const Navigation = ({ isNavCollapsed }) => {
         <div className="col-2">
             <nav className="navbar navbar-expand-lg navbar-light bg-light rounded">
 
-                <div id="sidebarMenu" className={`${isNavCollapsed ? 'col-md-3 col-lg-2 d-md-block bg-light sidebar collapse' : ''} col-md-3 col-lg-2 d-md-block bg-light sidebar navbar-collapse`}  >
+                <div id="sidebarMenu" className={`${isNavCollapsed ? 'col-md-3 col-lg-2 d-md-block bg-light sidebar collapse' : ''} col-md-3 col-lg-2 d-md-block bg-light sidebar`}  >
                     <div className="position-sticky pt-3">
                         <ul className="nav flex-column">
                             <li className="nav-item">
@@ -22,7 +22,10 @@ const Navigation = ({ isNavCollapsed }) => {
                                 <Link to="/create" className="nav-link">Notifications</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/create" className="nav-link">Profile</Link>
+                                <Link to="/profile" className="nav-link">Profile</Link>
+                            </li>
+                            <li>
+                            <a className="nav-link" href="/">Sign out</a>
                             </li>
                         </ul>
                     </div>

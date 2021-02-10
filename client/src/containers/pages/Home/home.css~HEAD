@@ -1,43 +1,17 @@
-
-body::-webkit-scrollbar {
-  width: 1em;
-}
-
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-}
-
-
-.catchup{
-  background: #ffffff;
-  width: 370px;
-  height: 120px;
-  border-radius:7px;
-  float: left;
-  margin: 1%;
-  border: 1px solid #eeeeee;
-  padding-top:12px;
-}
-
-.catchups{
-  margin:0 10px;
-}
-
-
-
 .event{
 
   background:#eeeeee;
-  width:507px!important;
-  height:187px!important;
+  width:420px;
+  height:180px;
   float:left;
   margin:0 10px;
   padding-top:35px;
-  border:1px solid #e0e0e0;
+  border:3px solid #ffffff;
+
+}
+
+.meetups{
+  margin:0 10px;
 }
 
 ::-webkit-scrollbar {
@@ -51,21 +25,20 @@ body::-webkit-scrollbar-thumb {
 
 
 .profileimg{
-  height:90px;
-  width:90px;
-  background:#eeeeee;
+  height:110px;
+  width:110px;
+  background:#ffffff;
   border-radius:120px;
   margin:0 15px;
 }
 
 .meetup{
-  border:1px solid #eeeeee;
-  width:550px!important;
-  height:240px!important;
+
+  background:#eeeeee;
+  width:420px;
+  height:240px;
   float:left;
-  margin:0 10px;
-  padding-top:35px;
-  border-radius:0!important;
+  margin:1%;
 
 }
 
@@ -84,26 +57,19 @@ body::-webkit-scrollbar-thumb {
   background:#e0dfdf;
 }
 
+
 .scrolling-wrapper{
-  overflow-x: auto;
-
+	overflow-x: auto;
 }
 
-.scrolling-wrapper2{
-  overflow-x: auto;
-  height: 287px;
-  padding-top: 19px!important;
-}
 
 .bg-light {
     background-color: #f8f9fa!important;
-    margin-top: 45px;
+    margin-top: 65px;
     z-index:999999;
     position: fixed;
     top: 0;
     left: 0;
-    height:250px;
-
   }
 
 
@@ -111,7 +77,6 @@ body::-webkit-scrollbar-thumb {
 
     .bg-light {
         background:none!important;
-        border:0!important;
 
       }
 
