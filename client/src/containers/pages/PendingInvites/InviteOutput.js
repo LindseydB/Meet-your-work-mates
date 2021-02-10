@@ -77,7 +77,7 @@ const InviteOutput = (props) => {
         </Modal.Content>
         <Modal.Actions>
         <Button class="bluebtn"  onClick={() => {
-          axios.get("http://localhost:4000/meetup_invites/reject/"+selectedInvite.inviter+"/"+selectedInvite.invitee)
+                axios.get("https://api-dot-meet-work-mates.ts.r.appspot.com/meetup_invites/reject/"+selectedInvite.inviter+"/"+selectedInvite.invitee)
             .then((result) => {
                 //set the search array within the state to contain the JSON result for displaying in the other components
                 console.log(result);

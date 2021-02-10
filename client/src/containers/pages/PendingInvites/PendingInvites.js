@@ -12,7 +12,7 @@ const PendingInvites = () => {
 
   //useEffect prevents this GET request from firing each render which can cause memory leaks if left unchecked
   useEffect(() => {
-    axios.get("http://localhost:4000/meetup_invites/pending/"+email)
+      axios.get("https://api-dot-meet-work-mates.ts.r.appspot.com/meetup_invites/pending/"+email)
       .then((result) => {
           //set the search array within the state to contain the JSON result for displaying in the other components
           setReceivedInvites(result.data);
